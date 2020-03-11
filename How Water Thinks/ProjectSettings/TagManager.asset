@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Boxes
+  - Atoms
+  - RunControl
+  - SodiumAtom
+  - ChlorineAtom
+  - AtomsOutsideCounterText
+  - AtomsInsideCounterText
+  - NumNaIons
+  - NumClIons
+  - NumKIons
+  - PotassiumAtom
+  - naToggle
+  - clToggle
+  - kToggle
+  - Voltage
+  - VoltmeterTextTop
+  - test
+  - VoltmeterTextBottom
+  - NextBtn
+  - PrevBtn
+  - DeltaVCountText
+  - NaForce
+  - ClForce
+  - KForce
+  - FastForward
+  - VoltageChanger
+  - NaLiner
+  - ClLiner
+  - KLiner
+  - NaChannelToggle
+  - ClChannelToggle
+  - KChannelToggle
+  - ModelMembrane
+  - VolumeSlider
+  - Resolution
+  - Fullscreen
+  - ColorblindToggle
+  - NaChannelSlider
+  - star1
+  - star2
+  - star3
+  - KIn
+  - KOut
+  - NaIn
+  - NaOut
+  - endgame
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
