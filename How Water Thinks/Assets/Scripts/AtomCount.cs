@@ -92,7 +92,8 @@ public class AtomCount : MonoBehaviour {
 
         }
         voltage = (NaAtomsOut + KAtomsOut) - (NaAtomsIn + KAtomsIn);
-        //GameObject.FindGameObjectWithTag("Voltage").GetComponent<Slider>().value = voltage;
+        if (GameObject.FindGameObjectWithTag("Voltage") != null) GameObject.FindGameObjectWithTag("Voltage").GetComponent<Slider>().value = voltage;
+        if (GameObject.FindGameObjectWithTag("VoltageText") != null) GameObject.FindGameObjectWithTag("VoltageText").GetComponent<Text>().text = "Voltage: " + voltage;
         //print(NaAtomsOut + KAtomsOut);
         //print(KAtomsIn + NaAtomsIn);
         //print("voltage: " + voltage);

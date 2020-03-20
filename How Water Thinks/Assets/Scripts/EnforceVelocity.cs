@@ -25,6 +25,13 @@ public class EnforceVelocity : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		rb.velocity += atomVelocity * velocityMultiplier;
 		rb.angularVelocity += atomVelocity * angularVelocityMultiplier;
+		Scene currentScene = SceneManager.GetActiveScene();
+		string sceneName = currentScene.name;
+		if (sceneName == "Level 0") {
+			temp = 1;
+		} else {
+			temp = 1;
+		}
 		float idealVelocity = temp * 1f;
 		this.gameObject.GetComponent<Rigidbody>().velocity = idealVelocity * this.gameObject.GetComponent<Rigidbody>().velocity.normalized;
 		
@@ -44,7 +51,15 @@ public class EnforceVelocity : MonoBehaviour {
 		rb.angularVelocity += atomVelocity * angularVelocityMultiplier;*/
         this.gameObject.GetComponent<Rigidbody>().drag = 0;
         this.gameObject.GetComponent<Rigidbody>().angularDrag = 0;
-		
+		rb = this.gameObject.GetComponent<Rigidbody>();
+		if (rb.velocity.magnitude > 5f) {
+			rb.velocity = rb.velocity.normalized * 2f;
+			// print("limiting speed");
+		}
+		if (rb.velocity.magnitude < 1f) {
+			rb.velocity = rb.velocity.normalized * 1f;
+			// print("boosting speed");
+		}
 		// if (sceneName == "Level 3") {
 		// 	float idealVelocity = temp * 1f;
 		// 	this.gameObject.GetComponent<Rigidbody>().velocity = idealVelocity * this.gameObject.GetComponent<Rigidbody>().velocity.normalized;
