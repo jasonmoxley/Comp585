@@ -50,6 +50,7 @@ TagManager:
   - NaIn
   - NaOut
   - endgame
+  - VoltageText
   layers:
   - Default
   - TransparentFX
