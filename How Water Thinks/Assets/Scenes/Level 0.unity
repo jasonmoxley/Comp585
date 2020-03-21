@@ -10272,6 +10272,7 @@ MonoBehaviour:
   voltageOuter: 0
   voltageInner: 0
   voltage: 0
+  oldVoltage: 0
   reflectChance: 0
   minVoltage: 0
   maxVoltage: 0
@@ -13412,7 +13413,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1195256355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0999756, y: 0.1000061, z: 0}
+  m_LocalPosition: {x: -1.0999756, y: 0.112, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1383374848}
@@ -13550,8 +13551,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Make each type of molecule reach a 50/50 split across the membrane as fast
-    as you can! The fast you can complete this task the more stars you will get!!!
+  m_Text: Make the molecules reach a 50/50 split across the membrane as fast as you
+    can! The faster you do it the more starts you get!
 --- !u!222 &1198834963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20025,7 +20026,7 @@ GameObject:
   - component: {fileID: 1809970298}
   m_Layer: 0
   m_Name: KForce
-  m_TagString: KForce
+  m_TagString: NaForce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20037,7 +20038,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809970296}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 1.102, y: 0.096, z: 0}
+  m_LocalPosition: {x: 1.1, y: 0.111, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1383374848}
@@ -22347,7 +22348,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 75adfe9a619833445a701305b983e548, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 632ed38fb483da8498794f9bb9ebefea, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22440,7 +22441,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946401084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 659.9, y: 214.96, z: -205}
+  m_LocalPosition: {x: 659.9, y: 214.97, z: -205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
