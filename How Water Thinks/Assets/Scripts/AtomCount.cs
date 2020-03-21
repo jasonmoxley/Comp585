@@ -16,6 +16,7 @@ public class AtomCount : MonoBehaviour {
     public float voltageOuter;
     public float voltageInner;
     public float voltage;
+    public float oldVoltage;
     public float reflectChance = 0;
     public float minVoltage;
     public float maxVoltage;
@@ -58,6 +59,7 @@ public class AtomCount : MonoBehaviour {
         NaAtomsOut = 0;
         KAtomsIn = 0;
         KAtomsOut = 0;
+        voltage = 0;
 
 
         foreach (GameObject atom in GameObject.FindGameObjectsWithTag("SodiumAtom")) {
@@ -92,6 +94,12 @@ public class AtomCount : MonoBehaviour {
 
         }
         voltage = (NaAtomsOut + KAtomsOut) - (NaAtomsIn + KAtomsIn);
+        if (oldVoltage == 0) {oldVoltage = voltage;}
+        if (voltage != oldVoltage) {
+            print("playing sound");
+            GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+        }
+        oldVoltage = voltage;
         if (GameObject.FindGameObjectWithTag("Voltage") != null) GameObject.FindGameObjectWithTag("Voltage").GetComponent<Slider>().value = voltage;
         if (GameObject.FindGameObjectWithTag("VoltageText") != null) GameObject.FindGameObjectWithTag("VoltageText").GetComponent<Text>().text = "Voltage: " + voltage;
         //print(NaAtomsOut + KAtomsOut);

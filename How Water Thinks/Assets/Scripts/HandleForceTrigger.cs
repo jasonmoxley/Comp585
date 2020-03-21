@@ -29,7 +29,7 @@ public class HandleForceTrigger : MonoBehaviour
                     {
                         if (c.gameObject.transform.position.y > 214.95)
                         {
-                            GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                            //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                             return;
                         }
                         else
@@ -55,7 +55,7 @@ public class HandleForceTrigger : MonoBehaviour
                     {
                         if (c.gameObject.transform.position.y > 214.95)
                         {
-                            GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                            //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                             return;
                         }
                         else
@@ -82,7 +82,7 @@ public class HandleForceTrigger : MonoBehaviour
                     {
                         if (c.gameObject.transform.position.y < 214.95)
                         {
-                            GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                            //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                             return;
                         }
                         else
@@ -108,7 +108,7 @@ public class HandleForceTrigger : MonoBehaviour
                     {
                         if (c.gameObject.transform.position.y < 214.95)
                         {
-                            GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                            //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                             return;
                         }
                         else
@@ -134,7 +134,7 @@ public class HandleForceTrigger : MonoBehaviour
                 {
                     if (c.gameObject.tag == "SodiumAtom")
                     {
-                        GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                        //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                         return;
                     }
                     else
@@ -154,7 +154,7 @@ public class HandleForceTrigger : MonoBehaviour
                     
                     if (c.gameObject.tag == "PotassiumAtom")
                     {
-                        GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                        //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                         return;
                     }
                     else
@@ -176,7 +176,7 @@ public class HandleForceTrigger : MonoBehaviour
             {
                 if (c.gameObject.tag == "SodiumAtom")
                 {
-                    GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                    // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                     return;
                 }
                 else
@@ -196,8 +196,7 @@ public class HandleForceTrigger : MonoBehaviour
                 
                 if (c.gameObject.tag == "PotassiumAtom")
                 {
-                    print("playing sound");
-                    GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                    //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
                     return;
                 }
                 else
