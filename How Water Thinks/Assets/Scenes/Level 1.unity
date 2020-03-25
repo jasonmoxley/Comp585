@@ -1448,7 +1448,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congradulations! You Beat the Level!
+  m_Text: Congratulations! You Beat the Level!
 --- !u!222 &121553982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8452,6 +8452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxSideLength: 1
   channelSideLength: 1
+  popup: {fileID: 592694304}
 --- !u!114 &889702322
 MonoBehaviour:
   m_ObjectHideFlags: 0
