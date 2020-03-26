@@ -51,6 +51,7 @@ TagManager:
   - NaOut
   - endgame
   - VoltageText
+  - Lion
   layers:
   - Default
   - TransparentFX
