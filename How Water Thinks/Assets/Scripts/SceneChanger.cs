@@ -13,10 +13,11 @@ public class SceneChanger : MonoBehaviour {
     public void NextScene()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }
+        // if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        // {
+        //     SceneManager.LoadScene(nextSceneIndex);
+        // }
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
     public void PrevScene()
@@ -28,9 +29,19 @@ public class SceneChanger : MonoBehaviour {
         }
     }
 
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level 3");
+    }
+
     public void StartGame()
     {
-        SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene("Game_Map");
     }
 
     public void Settings()
