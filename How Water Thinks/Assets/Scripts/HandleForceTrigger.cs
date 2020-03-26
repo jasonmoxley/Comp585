@@ -13,8 +13,9 @@ public class HandleForceTrigger : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider c)
-    {
+ void OnCollisionEnter(Collision c)
+  {
+
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (sceneName == "Level 3") {
@@ -30,23 +31,18 @@ public class HandleForceTrigger : MonoBehaviour
                         if (c.gameObject.transform.position.y > 214.95)
                         {
                             //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            return;
+                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
+
                         }
                         else
                         {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+                            
+                            return;
                         }
                     }
                     else
                     {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                        }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
+                        return;
                     }
                 }
                 else if (this.tag == "KForce")
@@ -56,23 +52,17 @@ public class HandleForceTrigger : MonoBehaviour
                         if (c.gameObject.transform.position.y > 214.95)
                         {
                             //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
+
+                        }
+                        else
+                        {
                             return;
                         }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
                     }
-                    else
+                    else 
                     {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                        }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
+                        return;
                     }
                 }
             } else if (totalVoltage <= -70) {
@@ -83,23 +73,17 @@ public class HandleForceTrigger : MonoBehaviour
                         if (c.gameObject.transform.position.y < 214.95)
                         {
                             //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            return;
+                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
+
                         }
                         else
                         {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+                            return;
                         }
                     }
                     else
                     {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                        }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
+                        return;
                     }
                 }
                 else if (this.tag == "KForce")
@@ -109,23 +93,17 @@ public class HandleForceTrigger : MonoBehaviour
                         if (c.gameObject.transform.position.y < 214.95)
                         {
                             //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            return;
+                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
+
                         }
                         else
                         {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+                            return;
                         }
                     }
                     else
                     {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                        }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
+                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                     }
                 }
             }
@@ -135,18 +113,11 @@ public class HandleForceTrigger : MonoBehaviour
                     if (c.gameObject.tag == "SodiumAtom")
                     {
                         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                        return;
+                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                     }
                     else
                     {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                        }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
+                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                     }
                 }
                 else if (this.tag == "KForce")
@@ -155,64 +126,244 @@ public class HandleForceTrigger : MonoBehaviour
                     if (c.gameObject.tag == "PotassiumAtom")
                     {
                         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                        return;
+                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                     }
                     else
                     {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                        }
-                        else
-                        {
-                            c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                        }
+                        return;
                     }
                 }
             }
         }
-        else {
+        else { // level 1 or 2
             if (this.tag == "NaForce")
             {
                 if (c.gameObject.tag == "SodiumAtom")
                 {
-                    // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                    return;
-                }
-                else
-                {
-                    if (c.gameObject.transform.position.y > 214.95)
-                    {
-                        c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                    }
-                    else
-                    {
-                        c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                    }
+                    Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                 }
             }
             else if (this.tag == "KForce")
             {
-                
                 if (c.gameObject.tag == "PotassiumAtom")
                 {
-                    //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                    return;
-                }
-                else
-                {
-                    if (c.gameObject.transform.position.y > 214.95)
-                    {
-                        c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
-                    }
-                    else
-                    {
-                        c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
-                    }
+                    Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                 }
             }
-        }
-    }
+  }
+  }
+
+
+    // private void OnTriggerEnter(Collider c)
+    // {
+    //     Scene currentScene = SceneManager.GetActiveScene();
+    //     string sceneName = currentScene.name;
+    //     if (sceneName == "Level 3") {
+    //         //float voltageOuter = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltageOuter();
+    //         //float voltageInner = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltageInner();
+    //         float totalVoltage = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltage();
+    //         //print(totalVoltage);
+    //         if (totalVoltage >= 70) {
+    //             if (this.tag == "NaForce")
+    //             {
+    //                 if (c.gameObject.tag == "SodiumAtom")
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+    //                         return;
+    //                     }
+    //                     else
+    //                     {
+                            
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //                 else
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //             }
+    //             else if (this.tag == "KForce")
+    //             {
+    //                 if (c.gameObject.tag == "PotassiumAtom")
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+    //                         return;
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //                 else 
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //             }
+    //         } else if (totalVoltage <= -70) {
+    //             if (this.tag == "NaForce")
+    //             {
+    //                 if (c.gameObject.tag == "SodiumAtom")
+    //                 {
+    //                     if (c.gameObject.transform.position.y < 214.95)
+    //                     {
+    //                         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+    //                         return;
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                 }
+    //                 else
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //             }
+    //             else if (this.tag == "KForce")
+    //             {
+    //                 if (c.gameObject.tag == "PotassiumAtom")
+    //                 {
+    //                     if (c.gameObject.transform.position.y < 214.95)
+    //                     {
+    //                         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+    //                         return;
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                 }
+    //                 else
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         else {
+    //             if (this.tag == "NaForce")
+    //             {
+    //                 if (c.gameObject.tag == "SodiumAtom")
+    //                 {
+    //                     //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+    //                     return;
+    //                 }
+    //                 else
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //             }
+    //             else if (this.tag == "KForce")
+    //             {
+                    
+    //                 if (c.gameObject.tag == "PotassiumAtom")
+    //                 {
+    //                     //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+    //                     return;
+    //                 }
+    //                 else
+    //                 {
+    //                     if (c.gameObject.transform.position.y > 214.95)
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+    //                     }
+    //                     else
+    //                     {
+    //                         c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     else { // level < 3
+            // if (this.tag == "NaForce")
+            // {
+            //     if (c.gameObject.tag == "SodiumAtom")
+            //     {
+            //         // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+            //         return;
+            //     }
+            //     else
+            //     {
+            //         if (c.gameObject.transform.position.y > 214.95)
+            //         {
+            //             c.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(c.gameObject.GetComponent<Rigidbody>().velocity.x, c.gameObject.GetComponent<Rigidbody>().velocity.y * -1, c.gameObject.GetComponent<Rigidbody>().velocity.z);
+            //             c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+            //         }
+            //         else
+            //         {
+            //             c.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(c.gameObject.GetComponent<Rigidbody>().velocity.x, c.gameObject.GetComponent<Rigidbody>().velocity.y * -1, c.gameObject.GetComponent<Rigidbody>().velocity.z);
+            //             c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+            //         }
+            //     }
+            // }
+            // else if (this.tag == "KForce")
+            // {
+                
+            //     if (c.gameObject.tag == "PotassiumAtom")
+            //     {
+            //         //GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+            //         return;
+            //     }
+            //     else
+            //     {
+            //         if (c.gameObject.transform.position.y > 214.95)
+            //         {
+            //             // c.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            //             c.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(c.gameObject.GetComponent<Rigidbody>().velocity.x, c.gameObject.GetComponent<Rigidbody>().velocity.y * -1, c.gameObject.GetComponent<Rigidbody>().velocity.z);
+            //             // c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0));
+
+            //         }
+            //         else
+            //         {
+            //             // c.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+            //             c.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(c.gameObject.GetComponent<Rigidbody>().velocity.x, c.gameObject.GetComponent<Rigidbody>().velocity.y * -1, c.gameObject.GetComponent<Rigidbody>().velocity.z);
+            //             // c.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 0));
+
+            //         }
+            //     }
+            // }
+    //     }
+    // }
 
     // private void OnTriggerEnter(Collider c)
     // {
