@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cloud : MonoBehaviour {
+public class cloud_1 : MonoBehaviour {
 
  
     public Vector2 begin;
