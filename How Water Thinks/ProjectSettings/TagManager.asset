@@ -4,53 +4,46 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Boxes
-  - Atoms
-  - RunControl
-  - SodiumAtom
-  - ChlorineAtom
-  - AtomsOutsideCounterText
-  - AtomsInsideCounterText
-  - NumNaIons
-  - NumClIons
-  - NumKIons
-  - PotassiumAtom
-  - naToggle
-  - clToggle
-  - kToggle
-  - Voltage
-  - VoltmeterTextTop
-  - test
-  - VoltmeterTextBottom
-  - NextBtn
-  - PrevBtn
-  - DeltaVCountText
-  - NaForce
-  - ClForce
-  - KForce
-  - FastForward
-  - VoltageChanger
-  - NaLiner
-  - ClLiner
-  - KLiner
-  - NaChannelToggle
-  - ClChannelToggle
-  - KChannelToggle
-  - ModelMembrane
-  - VolumeSlider
-  - Resolution
-  - Fullscreen
-  - ColorblindToggle
   - NaChannelSlider
-  - star1
+  - kToggle
+  - PrevBtn
+  - test
+  - RunControl
+  - NaForce
+  - naToggle
+  - ModelMembrane
+  - NaChannelToggle
   - star2
   - star3
-  - KIn
-  - KOut
   - NaIn
-  - NaOut
   - endgame
-  - VoltageText
+  - NaOut
+  - Boxes
+  - star1
+  - KChannelToggle
+  - NaLiner
+  - NumKIons
+  - FastForward
+  - AtomsOutsideCounterText
+  - DeltaVCountText
+  - AtomsInsideCounterText
+  - Voltage
+  - VoltmeterTextTop
+  - VoltmeterTextBottom
+  - NumNaIons
+  - Resolution
+  - Fullscreen
+  - VolumeSlider
+  - ColorblindToggle
+  - ChlorineAtom
+  - SodiumAtom
+  - PotassiumAtom
+  - Atoms
+  - clToggle
+  - KIn
+  - KForce
+  - KOut
+  - KLiner
   layers:
   - Default
   - TransparentFX
@@ -60,8 +53,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - 
+  - textbox
+  - text
   - 
   - 
   - 
