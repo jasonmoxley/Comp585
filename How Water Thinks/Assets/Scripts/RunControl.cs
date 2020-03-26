@@ -13,6 +13,7 @@ public class RunControl : MonoBehaviour
     public float boxSideLength;
     public float channelSideLength;
     private float speed;
+    public GameObject popup;
 
     GameObject runControl;
 
@@ -22,7 +23,7 @@ public class RunControl : MonoBehaviour
         Time.timeScale = 1;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-
+        popup.SetActive(false);
         GameObject atoms = GameObject.FindGameObjectWithTag("Atoms");
 
         if (GameObject.FindGameObjectsWithTag("VolumeSlider").Length > 0) GameObject.FindGameObjectWithTag("VolumeSlider").GetComponent<Slider>().value = Globals.volume;
@@ -278,37 +279,82 @@ public class RunControl : MonoBehaviour
         else if (GameObject.FindGameObjectWithTag("FastForward").GetComponent<Dropdown>().value == 4) Time.timeScale = 25;
     }
 
-    // public void checkForWin()
-    // {
-    //     Time.timeScale = 1;
-    //     Scene currentScene = SceneManager.GetActiveScene();
-    //     string sceneName = currentScene.name;
-    //     if (sceneName == "Level 0")
-    //     {
-    //         int result = GameObject.FindGameObjectWithTag("NaIn");
-    //     }
-    //     else if (sceneName == "Level 1")
-    //     {
-            
-    //     }
-    // }
+    public void checkForWin()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        int naOnTop = 0;
+        int naOnBottom = 0;
+        int kOnTop = 0;
+        int kOnBottom = 0;
+        int topTotal = 0;
+        int bottomTotal = 0;
+        foreach (GameObject atom in GameObject.FindGameObjectsWithTag("SodiumAtom"))
+        {
+            if (atom.transform.position.y > 214.95)
+            {
+                naOnTop++;
+            }
+            else 
+            {
+                naOnBottom++;
+            }
+        }
+        foreach (GameObject atom in GameObject.FindGameObjectsWithTag("PotassiumAtom"))
+        {
+            if (atom.transform.position.y > 214.95)
+            {
+                kOnTop++;
+            }
+            else 
+            {
+                kOnBottom++;
+            }
+        }
+        topTotal = naOnTop + kOnTop;
+        bottomTotal = naOnBottom + kOnBottom;
+        if (sceneName == "Level 0")
+        {
+            if (naOnBottom >= 25)
+            {
+                Time.timeScale = 0;
+                popup.SetActive(true);
+            }
+        }
+        else if (sceneName == "Level 1")
+        {
+            if ((naOnBottom >= 25) && (kOnTop >= 25))
+            {
+                Time.timeScale = 0;
+                popup.SetActive(true);
+            }
+        }
+        else if (sceneName == "Level 3")
+        {
+            if (((topTotal - bottomTotal) >= 25) || ((bottomTotal - topTotal) >= 25))
+            {
+                Time.timeScale = 0;
+                popup.SetActive(true);
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
         //NormalizeVelocity();
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            foreach (GameObject atom in GameObject.FindGameObjectsWithTag("PotassiumAtom"))
-            {
-                if (atom.transform.position.y > 214.95)
-                {
-                    Destroy(atom);
-                    GameObject.Find("Atoms").GetComponent<CreateAtoms>().AddNAtoms(1, 1, 0, 0, 1);
-                }
-            }
-        }
-
+        // if (SceneManager.GetActiveScene().buildIndex == 1)
+        // {
+        //     foreach (GameObject atom in GameObject.FindGameObjectsWithTag("PotassiumAtom"))
+        //     {
+        //         if (atom.transform.position.y > 214.95)
+        //         {
+        //             Destroy(atom);
+        //             GameObject.Find("Atoms").GetComponent<CreateAtoms>().AddNAtoms(1, 1, 0, 0, 1);
+        //         }
+        //     }
+        // }
+    checkForWin();
         if (GameObject.FindGameObjectsWithTag("VolumeSlider").Length > 0)
         {
             AudioListener.volume = GameObject.FindGameObjectWithTag("VolumeSlider").GetComponent<Slider>().value;
