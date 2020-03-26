@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Walking : MonoBehaviour {
+    public Animator anim;
      
      float speed = 1.0f;
 
@@ -11,13 +14,15 @@ public class Walking : MonoBehaviour {
      }
 
      public void checkForSceneChange() {
-         if (GameObject.FindGameObjectWithTag("Lion".transform.position.x >= -10)) {
+         if (GameObject.FindGameObjectWithTag("Lion").transform.position.x >= -10) {
              NextScene();
          }
      }
      
      void Update() {
+        
          var move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
          transform.position += move * speed * Time.deltaTime;
+
      }
  }
