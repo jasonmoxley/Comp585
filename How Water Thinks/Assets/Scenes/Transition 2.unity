@@ -207,7 +207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -71}
+  m_AnchoredPosition: {x: 9, y: -72}
   m_SizeDelta: {x: 350, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364836067
@@ -242,9 +242,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The forest seems peaceful until some angry squirrels begin throwing nuts
-    at you! Everyone starts running to avoid being pelted, but Lion does not have
-    the energy to catch up yet. You must get his adrenaline going!
+  m_Text: The forest seems peaceful until angry squirrels start throwing acorns! While
+    running, they notice Tin Man, stuck between the trees. He says he does not have
+    the energy to run. You must help get his adrenaline going!
 --- !u!222 &364836068
 CanvasRenderer:
   m_ObjectHideFlags: 0
