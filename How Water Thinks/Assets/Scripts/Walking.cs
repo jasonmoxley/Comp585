@@ -8,7 +8,7 @@ public class Walking : MonoBehaviour {
     float speed = 1.0f;
     public void NextScene()
     {
-        SceneManager.LoadScene("Level 0");
+        SceneManager.LoadScene("Transition 1");
     }
     public void checkForSceneChange()
     {

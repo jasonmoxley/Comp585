@@ -29,6 +29,11 @@ public class SceneChanger : MonoBehaviour {
         }
     }
 
+    public void LoadLevel0()
+    {
+        SceneManager.LoadScene("Level 0");
+    }
+
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Level 1");
@@ -37,6 +42,36 @@ public class SceneChanger : MonoBehaviour {
     public void LoadLevel2()
     {
         SceneManager.LoadScene("Level 3");
+    }
+
+    public void LoadTransition1()
+    {
+        SceneManager.LoadScene("Transition 1");
+    }
+
+    public void LoadTransition12()
+    {
+        SceneManager.LoadScene("Transition 1.2");
+    }
+
+    public void LoadTransition2()
+    {
+        SceneManager.LoadScene("Transition 2");
+    }
+
+    public void LoadTransition22()
+    {
+        SceneManager.LoadScene("Transition 2.2");
+    }
+
+    public void LoadTransition3()
+    {
+        SceneManager.LoadScene("Transition 3");
+    }
+
+    public void LoadTransition32()
+    {
+        SceneManager.LoadScene("Transition 3.2");
     }
 
     public void StartGame()

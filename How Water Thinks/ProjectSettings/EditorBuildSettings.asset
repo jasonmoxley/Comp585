@@ -42,12 +42,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Game_Map.unity
     guid: 5b28759bf84304269b2ed7e83e05ee1c
   - enabled: 1
+    path: Assets/Scenes/Transition 1.unity
+    guid: 76a50cb8240489e4da210ddd42caa097
+  - enabled: 1
     path: Assets/Scenes/Level 0.unity
     guid: 723168ae57156498e80670d89d437531
+  - enabled: 1
+    path: Assets/Scenes/Transition 1.2.unity
+    guid: 2c960c8af97567341bdfdfefe753083c
+  - enabled: 1
+    path: Assets/Scenes/Transition 2.unity
+    guid: 3bb83ef8e9bc77249b60cf088e577124
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: fc53952cc1d26409ea0440ed9989ded7
   - enabled: 1
+    path: Assets/Scenes/Transition 2.2.unity
+    guid: b0e93b277bd787448b1e918d549f7b39
+  - enabled: 1
+    path: Assets/Scenes/Transition 3.unity
+    guid: cbf52b18a87d29b4d91463b788e99aba
+  - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: af5d935ea2a4649d48628ac8df87513d
+  - enabled: 1
+    path: Assets/Scenes/Transition 3.2.unity
+    guid: 55099e8090c62b04c9e9ab4761e4265e
   m_configObjects: {}
