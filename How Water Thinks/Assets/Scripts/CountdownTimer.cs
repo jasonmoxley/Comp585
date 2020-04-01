@@ -33,19 +33,19 @@ public class CountdownTimer : MonoBehaviour {
 		sceneName = currentScene.name;
 		if (sceneName == "Level 0")
 		{
-			if (t > 45)
+			if (t > 35)
 			{
 				star1.SetActive(false);
 				star2.SetActive(false);
 				star3.SetActive(false);
 			}
-			else if (t > 30)
+			else if (t > 25)
 			{
 				star1.SetActive(false);
 				star2.SetActive(false);
 				star3.SetActive(true);
 			}
-			else if (t > 15)
+			else if (t > 20)
 			{
 				star1.SetActive(false);
 				star2.SetActive(true);
@@ -60,19 +60,19 @@ public class CountdownTimer : MonoBehaviour {
 		}
 		else if (sceneName == "Level 1")
 		{
-			if (t > 45)
+			if (t > 70)
 			{
 				star1.SetActive(false);
 				star2.SetActive(false);
 				star3.SetActive(false);
 			}
-			else if (t > 30)
+			else if (t > 55)
 			{
 				star1.SetActive(false);
 				star2.SetActive(false);
 				star3.SetActive(true);
 			}
-			else if (t > 15)
+			else if (t > 45)
 			{
 				star1.SetActive(false);
 				star2.SetActive(true);
@@ -85,5 +85,35 @@ public class CountdownTimer : MonoBehaviour {
 				star3.SetActive(true);
 			}
 		}
+<<<<<<< Updated upstream
+=======
+		else if (sceneName == "Level 3")
+		{
+			if (t > 50)
+			{
+				star1.SetActive(false);
+				star2.SetActive(false);
+				star3.SetActive(false);
+			}
+			else if (t > 40)
+			{
+				star1.SetActive(false);
+				star2.SetActive(false);
+				star3.SetActive(true);
+			}
+			else if (t > 35)
+			{
+				star1.SetActive(false);
+				star2.SetActive(true);
+				star3.SetActive(true);
+			}
+			else
+			{
+				star1.SetActive(true);
+				star2.SetActive(true);
+				star3.SetActive(true);
+			}
+		}
+>>>>>>> Stashed changes
 	}
 }

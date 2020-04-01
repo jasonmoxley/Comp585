@@ -29,8 +29,10 @@ public class EnforceVelocity : MonoBehaviour {
 		string sceneName = currentScene.name;
 		if (sceneName == "Level 0") {
 			temp = 1;
+		} else if (sceneName == "Level 1") {
+			temp = 4;
 		} else {
-			temp = 1;
+			temp = 4;
 		}
 		float idealVelocity = temp * 1f;
 		this.gameObject.GetComponent<Rigidbody>().velocity = idealVelocity * this.gameObject.GetComponent<Rigidbody>().velocity.normalized;
