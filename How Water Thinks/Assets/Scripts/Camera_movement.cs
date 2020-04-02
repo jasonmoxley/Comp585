@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Camera_movement : MonoBehaviour {
+
+public Transform followObject;
+private Vector3 moveTemp;
+
+void start () {
+	moveTemp = followObject.transform.position;
+}
+
+void Update () {
+	moveTemp = followObject.transform.position;
+	moveTemp.z = -7;
+	moveTemp.y = 4;
+	transform.position = moveTemp;
+}
+	
+ 
+}

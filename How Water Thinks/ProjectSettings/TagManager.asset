@@ -52,6 +52,8 @@ TagManager:
   - endgame
   - VoltageText
   - Lion
+  - TinMan
+  - Dorthy
   layers:
   - Default
   - TransparentFX
