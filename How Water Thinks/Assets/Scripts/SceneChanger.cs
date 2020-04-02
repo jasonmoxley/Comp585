@@ -76,9 +76,18 @@ public class SceneChanger : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Game_Map");
+        SceneManager.LoadScene("Game_Map_0");
     }
 
+    public void LoadMap1()
+    {
+        SceneManager.LoadScene("Game_Map_1");
+    }
+
+    public void LoadMap2()
+    {
+        SceneManager.LoadScene("Game_Map_2");
+    }
     public void Settings()
     {
         SceneManager.LoadScene("Settings Menu");
