@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371274658}
   - component: {fileID: 371274657}
+  - component: {fileID: 371274659}
   - component: {fileID: 371274656}
   m_Layer: 0
   m_Name: Main Camera
@@ -190,6 +191,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371274659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371274655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dea08e4c51e14dc7af5d09973d022ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followObject: {fileID: 1742672755}
 --- !u!1 &501580190
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +501,7 @@ GameObject:
   - component: {fileID: 1742672754}
   - component: {fileID: 1742672753}
   - component: {fileID: 1742672752}
+  - component: {fileID: 1742672756}
   m_Layer: 0
   m_Name: Lion_3
   m_TagString: Lion
@@ -501,7 +515,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742672751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8337cce80399c49c1b0554ee0a0db683, type: 3}
   m_Name: 
@@ -577,12 +591,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742672751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: -2}
+  m_LocalPosition: {x: -3, y: 1.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1742672756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742672751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35e1671486104341a387b99058dd968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1769731783
 GameObject:
   m_ObjectHideFlags: 0
