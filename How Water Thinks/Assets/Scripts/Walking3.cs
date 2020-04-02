@@ -8,11 +8,11 @@ public class Walking3 : MonoBehaviour {
     float speed = 1.0f;
     public void NextScene()
     {
-        SceneManager.LoadScene("Transition 1");
+        SceneManager.LoadScene("Transition 4");
     }
     public void checkForSceneChange()
     {
-        if (GameObject.FindGameObjectWithTag("Lion_3").transform.position.x >= 25)
+        if (GameObject.FindGameObjectWithTag("Lion_3").transform.position.x >= 7)
         {
             NextScene();
         }
