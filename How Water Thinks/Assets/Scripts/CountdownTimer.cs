@@ -112,6 +112,33 @@ public class CountdownTimer : MonoBehaviour {
                 star3.SetActive(true);
             }
         }
+        else if (sceneName == "Level 4")
+        {
+            if (t > 50)
+            {
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+            else if (t > 40)
+            {
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(true);
+            }
+            else if (t > 35)
+            {
+                star1.SetActive(false);
+                star2.SetActive(true);
+                star3.SetActive(true);
+            }
+            else
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
+            }
+        }
     }
 }
 
