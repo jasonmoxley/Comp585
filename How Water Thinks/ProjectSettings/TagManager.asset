@@ -54,6 +54,9 @@ TagManager:
   - Lion
   - TinMan
   - Dorthy
+  - zeroActive
+  - ClOut
+  - ClIn
   layers:
   - Default
   - TransparentFX

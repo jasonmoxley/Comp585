@@ -26,6 +26,7 @@ public class toggleReaction : MonoBehaviour {
     public GameObject KLiner;
     private float KOn = 0;
     private float NaOn = 0;
+    private float ClOn = 0;
 
     // Use this for initialization
     void Start ()
@@ -57,7 +58,24 @@ public class toggleReaction : MonoBehaviour {
             NaKMembrane.SetActive(false);
             NaLiner.SetActive(false);
             KLiner.SetActive(false);
-        }       
+        }
+        if (sceneName == "Level 4")
+        {
+            ZeroMembrane.SetActive(true);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
+            NaLiner.SetActive(false);
+            KLiner.SetActive(false);
+            ClLiner.SetActive(false);
+            NaForce.SetActive(false);
+            KForce.SetActive(false);
+            ClForce.SetActive(false);
+        }
 	}
 
     public int getNumberNaChannels()
@@ -88,50 +106,150 @@ public class toggleReaction : MonoBehaviour {
         HandleChannelToggles();
     }
 
+    public void HandleClSlider(Slider slider)
+    {
+        ClOn = slider.value;
+        print(ClOn);
+        HandleChannelToggles();
+    }
+
     public void HandleChannelToggles()
     {
+        //print("NaOn: " + NaOn + " KOn: " + KOn + " ClOn: " + ClOn);
+        if (NaOn > 0 && KOn > 0 && ClOn > 0)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(true);
+            NaLiner.SetActive(true);
+            KLiner.SetActive(true);
+            ClLiner.SetActive(true);
+            NaForce.SetActive(true);
+            KForce.SetActive(true);
+            ClForce.SetActive(true);
+        }
+        if (KOn > 0 && ClOn > 0)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(true);
+            NaClKMembrane.SetActive(false);
+            NaLiner.SetActive(false);
+            KLiner.SetActive(true);
+            ClLiner.SetActive(true);
+            NaForce.SetActive(false);
+            KForce.SetActive(true);
+            ClForce.SetActive(true);
+        }
+        if (NaOn > 0 && ClOn > 0)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(true);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
+            NaLiner.SetActive(true);
+            KLiner.SetActive(false);
+            ClLiner.SetActive(true);
+            NaForce.SetActive(true);
+            KForce.SetActive(false);
+            ClForce.SetActive(true);
+        }
         if (NaOn > 0 && KOn > 0)
         {
             ZeroMembrane.SetActive(false);
             NaMembrane.SetActive(false);
             KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
             NaKMembrane.SetActive(true);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
             NaLiner.SetActive(true);
             KLiner.SetActive(true);
+            ClLiner.SetActive(false);
             NaForce.SetActive(true);
             KForce.SetActive(true);
+            ClForce.SetActive(false);
         }
         else if (NaOn > 0)
         {
             ZeroMembrane.SetActive(false);
             NaMembrane.SetActive(true);
             KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
             NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
             NaLiner.SetActive(true);
             KLiner.SetActive(false);
+            ClLiner.SetActive(false);
             NaForce.SetActive(true);
             KForce.SetActive(false);
+            ClForce.SetActive(false);
         }
         else if (KOn > 0)
         {
             ZeroMembrane.SetActive(false);
             NaMembrane.SetActive(false);
             KMembrane.SetActive(true);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
             NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
             NaLiner.SetActive(false);
             KLiner.SetActive(true);
+            ClLiner.SetActive(false);
             NaForce.SetActive(false);
             KForce.SetActive(true);
+            ClForce.SetActive(false);
+        }
+        else if (ClOn > 0)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(true);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
+            NaLiner.SetActive(false);
+            KLiner.SetActive(false);
+            ClLiner.SetActive(true);
+            NaForce.SetActive(false);
+            KForce.SetActive(false);
+            ClForce.SetActive(true);
         }
         else {
             ZeroMembrane.SetActive(true);
             NaMembrane.SetActive(false);
             KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
             NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
             NaLiner.SetActive(false);
             KLiner.SetActive(false);
+            ClLiner.SetActive(false);
             NaForce.SetActive(false);
             KForce.SetActive(false);
+            ClForce.SetActive(false);
         }
     }
 
@@ -200,7 +318,6 @@ public class toggleReaction : MonoBehaviour {
 
             }
         }
-        
     }
 
     public void HandleNaToggle(Toggle sodiumToggle)

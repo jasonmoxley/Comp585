@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8705,6 +8705,7 @@ MonoBehaviour:
   reflectChance: 0
   minVoltage: 0
   maxVoltage: 0
+  zeroMembrane: {fileID: 2101300468}
 --- !u!114 &889702325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21018,6 +21019,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7a3b915929ee5f444b9c378056b5ff96, type: 2}
+    - target: {fileID: 100014, guid: 63d419dfdb104c747aac1ceda745038f, type: 3}
+      propertyPath: m_TagString
+      value: zeroActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d419dfdb104c747aac1ceda745038f, type: 3}
   m_IsPrefabAsset: 0
