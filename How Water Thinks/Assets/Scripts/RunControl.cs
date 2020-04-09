@@ -252,15 +252,21 @@ public class RunControl : MonoBehaviour
     public void FastForwardSlider(Slider slider)
     {
         speed = slider.value;
+        print(speed);
         GameObject[] sodiumAtomClones = GameObject.FindGameObjectsWithTag("SodiumAtom");
         GameObject[] potassiumAtomClones = GameObject.FindGameObjectsWithTag("PotassiumAtom");
+        GameObject[] chlorineAtomClones = GameObject.FindGameObjectsWithTag("ChlorineAtom");
         foreach (GameObject atomClone in sodiumAtomClones)
         {
-            atomClone.GetComponent<Rigidbody>().velocity = atomClone.GetComponent<Rigidbody>().velocity.normalized * slider.value;
+            atomClone.GetComponent<Rigidbody>().velocity = atomClone.GetComponent<Rigidbody>().velocity.normalized * 1f * speed;
         }
         foreach (GameObject atomClone in potassiumAtomClones)
         {
-            atomClone.GetComponent<Rigidbody>().velocity = atomClone.GetComponent<Rigidbody>().velocity.normalized * slider.value;
+            atomClone.GetComponent<Rigidbody>().velocity = atomClone.GetComponent<Rigidbody>().velocity.normalized * 1f * speed;
+        }
+        foreach (GameObject atomClone in chlorineAtomClones)
+        {
+            atomClone.GetComponent<Rigidbody>().velocity = atomClone.GetComponent<Rigidbody>().velocity.normalized * 1f * speed;
         }
     }
 
@@ -295,6 +301,8 @@ public class RunControl : MonoBehaviour
         int naOnBottom = 0;
         int kOnTop = 0;
         int kOnBottom = 0;
+        int clOnTop = 0;
+        int clOnBottom = 0;
         int topTotal = 0;
         int bottomTotal = 0;
         foreach (GameObject atom in GameObject.FindGameObjectsWithTag("SodiumAtom"))
@@ -319,11 +327,21 @@ public class RunControl : MonoBehaviour
                 kOnBottom++;
             }
         }
-        topTotal = naOnTop + kOnTop;
-        bottomTotal = naOnBottom + kOnBottom;
+        foreach (GameObject atom in GameObject.FindGameObjectsWithTag("ChlorineAtom"))
+        {
+            if (atom.transform.position.y > 214.95)
+            {
+                clOnTop++;
+            }
+            else 
+            {
+                clOnBottom++;
+            }
+        }
+        int voltage = (naOnBottom + kOnBottom + clOnTop) - (naOnTop + kOnTop + clOnBottom);
         if (sceneName == "Level 0")
         {
-            if (naOnBottom >= 25)
+            if (naOnBottom >= 70)
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
@@ -331,7 +349,7 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 1")
         {
-            if ((naOnBottom >= 25) || (kOnTop >= 25))
+            if ((naOnBottom >= 45) || (kOnTop >= 45))
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
@@ -339,7 +357,15 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 3")
         {
-            if (((topTotal - bottomTotal) >= 25) || ((bottomTotal - topTotal) >= 25))
+            if ((voltage >= 65) || (voltage >= 65))
+            {
+                Time.timeScale = 0;
+                popup.SetActive(true);
+            }
+        }
+        else if (sceneName == "Level 4")
+        {
+            if (voltage <= 5)
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
