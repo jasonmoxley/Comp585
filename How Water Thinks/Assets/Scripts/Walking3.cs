@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Walking3 : MonoBehaviour {
      
-    float speed = 1.0f;
+    float speed = 2.0f;
     public void NextScene()
     {
         SceneManager.LoadScene("Transition 4");
     }
     public void checkForSceneChange()
     {
-        if (GameObject.FindGameObjectWithTag("Lion_3").transform.position.x >= 7)
+        if (GameObject.FindGameObjectWithTag("Lion").transform.position.x >= 7)
         {
             NextScene();
         }
