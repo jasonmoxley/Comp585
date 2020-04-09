@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_movement : MonoBehaviour {
+public class Camera_movement1 : MonoBehaviour {
 
 public Transform followObject;
 private Vector3 moveTemp;
@@ -12,7 +12,7 @@ void start () {
 }
 
 void Update () {
-	if (GameObject.FindGameObjectWithTag("Lion").transform.position.x >= 0) {
+	if (GameObject.FindGameObjectWithTag("TinMan").transform.position.x >= 0) {
 	moveTemp = followObject.transform.position;
 	moveTemp.z = -7;
 	moveTemp.y = 4;

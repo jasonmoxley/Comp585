@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_movement : MonoBehaviour {
+public class Camera_movement2 : MonoBehaviour {
 
 public Transform followObject;
 private Vector3 moveTemp;

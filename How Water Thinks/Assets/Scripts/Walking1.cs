@@ -12,7 +12,7 @@ public class Walking1 : MonoBehaviour {
     }
     public void checkForSceneChange()
     {
-        if (GameObject.FindGameObjectWithTag("TinMan").transform.position.x >= 25)
+        if (GameObject.FindGameObjectWithTag("TinMan").transform.position.x >= 24)
         {
             NextScene();
         }
