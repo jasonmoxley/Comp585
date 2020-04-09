@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Walking3 : MonoBehaviour {
      
-    float speed = 1.0f;
+    float speed = 2.0f;
     public void NextScene()
     {
         SceneManager.LoadScene("Transition 4");
