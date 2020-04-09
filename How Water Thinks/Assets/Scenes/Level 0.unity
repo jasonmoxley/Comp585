@@ -3409,7 +3409,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 61b4ca1e3be4f1b48a45c4654ea8609d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: 61b4ca1e3be4f1b48a45c4654ea8609d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8518,7 +8518,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1761411034}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 5
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -10381,12 +10381,12 @@ MonoBehaviour:
   ClKMembrane: {fileID: 0}
   NaClKMembrane: {fileID: 0}
   NaForce: {fileID: 1195256355}
-  NaForce2: {fileID: 0}
+  NaForce2: {fileID: 1809970296}
   NaLiner: {fileID: 1323756231}
   NaLiner2: {fileID: 1310575104}
   ClForce: {fileID: 0}
   ClLiner: {fileID: 0}
-  KForce: {fileID: 1809970296}
+  KForce: {fileID: 0}
   KLiner: {fileID: 0}
 --- !u!114 &889702324
 MonoBehaviour:
@@ -10403,6 +10403,8 @@ MonoBehaviour:
   KAtomsIn: 0
   NaAtomsOut: 0
   NaAtomsIn: 0
+  ClAtomsOut: 0
+  ClAtomsIn: 0
   numAtomsOuter: 0
   numAtomsInner: 0
   voltageOuter: 0
@@ -12121,7 +12123,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 300, y: 0}
-  m_SizeDelta: {x: 400, y: 90}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1045910345
 MonoBehaviour:
@@ -25153,7 +25155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 63d419dfdb104c747aac1ceda745038f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 63d419dfdb104c747aac1ceda745038f, type: 3}
       propertyPath: m_Name

@@ -80,4 +80,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game_Map_3.unity
     guid: 337976291c34641e9b782c37778c1e8b
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: c49c6c66264c44062a395cd58ecd11c1
+  - enabled: 1
+    path: Assets/Scenes/Transition 4.unity
+    guid: 93b1f70b8162b1e43974b35b0b2ece9a
+  - enabled: 1
+    path: Assets/Scenes/Transition 4.2.unity
+    guid: be832e8845db27e45b3b6b93bd9b1c96
   m_configObjects: {}

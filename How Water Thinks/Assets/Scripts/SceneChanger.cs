@@ -44,6 +44,10 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene("Level 3");
     }
 
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Level 4");
+    }
     public void LoadTransition1()
     {
         SceneManager.LoadScene("Transition 1");
@@ -74,6 +78,10 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene("Transition 3.2");
     }
 
+    public void LoadTransition42()
+    {
+        SceneManager.LoadScene("Transition 4.2");
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("Game_Map_0");
@@ -89,6 +97,12 @@ public class SceneChanger : MonoBehaviour {
     public void LoadMap2()
     {
         SceneManager.LoadScene("Game_Map_2");
+        Time.timeScale = 1;
+    }
+
+    public void LoadMap3()
+    {
+        SceneManager.LoadScene("Game_Map_3");
         Time.timeScale = 1;
     }
     public void Settings()
