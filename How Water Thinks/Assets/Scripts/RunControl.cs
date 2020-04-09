@@ -357,7 +357,7 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 3")
         {
-            if ((voltage >= 65) || (voltage >= 65))
+            if ((voltage >= 65) || (voltage <= -65))
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
