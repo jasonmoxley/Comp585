@@ -56,15 +56,15 @@ public class CreateAtoms : MonoBehaviour {
 
             GameObject atomclone;
             // Create a clone of atom at atomPosition
-            if (i % 2 == 0)
-            {
-                atomclone = Instantiate(chlorineAtom, kAtomPosition, Quaternion.identity);
-            }
-            else
-            {
-                atomclone = Instantiate(chlorineAtom, atomPosition, Quaternion.identity);
-            }
-
+            // if (i % 2 == 0)
+            // {
+            //     atomclone = Instantiate(chlorineAtom, kAtomPosition, Quaternion.identity);
+            // }
+            // else
+            // {
+            //     atomclone = Instantiate(chlorineAtom, atomPosition, Quaternion.identity);
+            // }
+            atomclone = Instantiate(chlorineAtom, atomPosition, Quaternion.identity);
 
       
             // Set initial velocity
@@ -125,17 +125,18 @@ public class CreateAtoms : MonoBehaviour {
 
             GameObject atomclone;
             // Create a clone of atom at atomPosition
-            if (clSpawnIndicator == 1)
-            {
-                atomclone = Instantiate(chlorineAtom, kAtomPosition, Quaternion.identity);
-                clSpawnIndicator = 0;
-            }
-            else
-            {
-                atomclone = Instantiate(chlorineAtom, atomPosition, Quaternion.identity);
-                clSpawnIndicator = 1;
-            }
+            // if (clSpawnIndicator == 1)
+            // {
+            //     atomclone = Instantiate(chlorineAtom, kAtomPosition, Quaternion.identity);
+            //     clSpawnIndicator = 0;
+            // }
+            // else
+            // {
+            //     atomclone = Instantiate(chlorineAtom, atomPosition, Quaternion.identity);
+            //     clSpawnIndicator = 1;
+            // }
 
+            atomclone = Instantiate(chlorineAtom, atomPosition, Quaternion.identity);
 
 
             // Set initial velocity
