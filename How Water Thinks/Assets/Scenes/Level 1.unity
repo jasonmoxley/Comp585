@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11488,6 +11488,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 889702331}
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1106354305
@@ -16898,8 +16909,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &1746641111 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: 5382517af9248bf4e89d528003a03380,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1746641110}
 --- !u!1 &1746641112 stripped
 GameObject:
@@ -22180,8 +22190,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &2121295080 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: 5382517af9248bf4e89d528003a03380,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 2121295079}
 --- !u!1 &2121295081 stripped
 GameObject:

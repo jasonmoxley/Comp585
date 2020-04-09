@@ -9,5 +9,8 @@ public class Globals : MonoBehaviour {
     public static int windowSize;
     public static bool fullscreenOn;
     public static bool firstLaunch;
+    public static int totalStars = 0;
+
+
 
 }
