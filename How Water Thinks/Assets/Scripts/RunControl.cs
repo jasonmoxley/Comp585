@@ -126,6 +126,14 @@ public class RunControl : MonoBehaviour
             print("creating atoms");
             GameObject.FindGameObjectWithTag("Atoms").GetComponent<CreateAtoms>().AddNAtoms(1, 1, atoms.GetComponent<CreateAtoms>().numberOfSodiumAtoms, atoms.GetComponent<CreateAtoms>().numberOfChlorineAtoms, atoms.GetComponent<CreateAtoms>().numberOfPotassiumAtoms);
         }
+        else if (sceneName == "Level 4")
+        {
+            RemoveAllMolecules();
+            atoms.GetComponent<CreateAtoms>().StartCreatingMolecules(1, 1);
+            RemoveAllMolecules();
+            print("creating atoms");
+            GameObject.FindGameObjectWithTag("Atoms").GetComponent<CreateAtoms>().AddNAtoms(1, 1, atoms.GetComponent<CreateAtoms>().numberOfSodiumAtoms, atoms.GetComponent<CreateAtoms>().numberOfChlorineAtoms, atoms.GetComponent<CreateAtoms>().numberOfPotassiumAtoms);
+        }
         else if (sceneName == "Scene 2" ||sceneName == "Scene 3")
         {
             RemoveAllMolecules();
@@ -323,7 +331,7 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 1")
         {
-            if ((naOnBottom >= 25) && (kOnTop >= 25))
+            if ((naOnBottom >= 25) || (kOnTop >= 25))
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
@@ -354,13 +362,10 @@ public class RunControl : MonoBehaviour
         //         }
         //     }
         // }
-    checkForWin();
+        checkForWin();
         if (GameObject.FindGameObjectsWithTag("VolumeSlider").Length > 0)
         {
             AudioListener.volume = GameObject.FindGameObjectWithTag("VolumeSlider").GetComponent<Slider>().value;
         }
-
-
-        
     }
 }

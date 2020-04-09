@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3409,7 +3409,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 61b4ca1e3be4f1b48a45c4654ea8609d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: 61b4ca1e3be4f1b48a45c4654ea8609d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10381,12 +10381,12 @@ MonoBehaviour:
   ClKMembrane: {fileID: 0}
   NaClKMembrane: {fileID: 0}
   NaForce: {fileID: 1195256355}
-  NaForce2: {fileID: 0}
+  NaForce2: {fileID: 1809970296}
   NaLiner: {fileID: 1323756231}
   NaLiner2: {fileID: 1310575104}
   ClForce: {fileID: 0}
   ClLiner: {fileID: 0}
-  KForce: {fileID: 1809970296}
+  KForce: {fileID: 0}
   KLiner: {fileID: 0}
 --- !u!114 &889702324
 MonoBehaviour:
@@ -10403,6 +10403,8 @@ MonoBehaviour:
   KAtomsIn: 0
   NaAtomsOut: 0
   NaAtomsIn: 0
+  ClAtomsOut: 0
+  ClAtomsIn: 0
   numAtomsOuter: 0
   numAtomsInner: 0
   voltageOuter: 0
@@ -10412,6 +10414,7 @@ MonoBehaviour:
   reflectChance: 0
   minVoltage: 0
   maxVoltage: 0
+  zeroMembrane: {fileID: 2101300468}
 --- !u!114 &889702325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13625,7 +13628,7 @@ Transform:
   m_GameObject: {fileID: 1195256355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.0999756, y: 0.112, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.01, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1383374848}
   m_RootOrder: 5
@@ -20362,7 +20365,7 @@ Transform:
   m_GameObject: {fileID: 1809970296}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 1.1, y: 0.111, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.01, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1383374848}
   m_RootOrder: 6
@@ -25152,7 +25155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 63d419dfdb104c747aac1ceda745038f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 63d419dfdb104c747aac1ceda745038f, type: 3}
       propertyPath: m_Name

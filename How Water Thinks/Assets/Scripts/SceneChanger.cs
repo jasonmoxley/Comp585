@@ -77,16 +77,19 @@ public class SceneChanger : MonoBehaviour {
     public void StartGame()
     {
         SceneManager.LoadScene("Game_Map_0");
+        Time.timeScale = 1;
     }
 
     public void LoadMap1()
     {
         SceneManager.LoadScene("Game_Map_1");
+        Time.timeScale = 1;
     }
 
     public void LoadMap2()
     {
         SceneManager.LoadScene("Game_Map_2");
+        Time.timeScale = 1;
     }
     public void Settings()
     {
