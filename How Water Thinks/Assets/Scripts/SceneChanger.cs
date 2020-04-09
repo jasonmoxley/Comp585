@@ -129,6 +129,11 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene("About Scene");
     }
 
+    public void creditsScene()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void exitScene()
     {
         Application.Quit();
