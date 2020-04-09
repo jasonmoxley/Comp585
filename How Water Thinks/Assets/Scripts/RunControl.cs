@@ -331,7 +331,7 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 1")
         {
-            if ((naOnBottom >= 25) && (kOnTop >= 25))
+            if ((naOnBottom >= 25) || (kOnTop >= 25))
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
@@ -362,7 +362,7 @@ public class RunControl : MonoBehaviour
         //         }
         //     }
         // }
-    checkForWin();
+        checkForWin();
         if (GameObject.FindGameObjectsWithTag("VolumeSlider").Length > 0)
         {
             AudioListener.volume = GameObject.FindGameObjectWithTag("VolumeSlider").GetComponent<Slider>().value;
