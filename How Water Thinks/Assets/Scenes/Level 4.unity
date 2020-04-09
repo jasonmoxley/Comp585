@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4657,11 +4657,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477806965}
   m_CullTransparentMesh: 0
---- !u!4 &489237810 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: 5382517af9248bf4e89d528003a03380,
-    type: 3}
-  m_PrefabInternal: {fileID: 2064285224}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -11712,6 +11707,10 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5382517af9248bf4e89d528003a03380, type: 3}
   m_IsPrefabAsset: 0
+--- !u!4 &1040088668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1040088667}
 --- !u!1 &1040088669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 5382517af9248bf4e89d528003a03380,
@@ -14830,9 +14829,9 @@ Transform:
   m_Children:
   - {fileID: 339169230}
   - {fileID: 1744524827}
-  - {fileID: 1400832243}
+  - {fileID: 1040088668}
   - {fileID: 606571874}
-  - {fileID: 489237810}
+  - {fileID: 2064285225}
   - {fileID: 609119911}
   - {fileID: 414234141}
   - {fileID: 1770896847}
@@ -14845,11 +14844,6 @@ Transform:
   m_Father: {fileID: 1769602161}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1400832243 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: 5382517af9248bf4e89d528003a03380,
-    type: 3}
-  m_PrefabInternal: {fileID: 1040088667}
 --- !u!1 &1406380118
 GameObject:
   m_ObjectHideFlags: 0
@@ -19804,6 +19798,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 889702331}
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1872996643
@@ -22884,6 +22889,10 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5382517af9248bf4e89d528003a03380, type: 3}
   m_IsPrefabAsset: 0
+--- !u!4 &2064285225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2064285224}
 --- !u!1 &2064285226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 5382517af9248bf4e89d528003a03380,

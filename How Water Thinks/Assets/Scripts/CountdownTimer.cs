@@ -140,5 +140,19 @@ public class CountdownTimer : MonoBehaviour {
             }
         }
     }
+
+    	public void UpdateScore () {
+		if (star1.activeSelf) {
+			Globals.totalStars++;
+		}
+		if (star2.activeSelf) {
+			Globals.totalStars++;
+		}
+		if (star3.activeSelf) {
+			Globals.totalStars++;
+		}
+        print("Total Score: " + Globals.totalStars);
+    }
+
 }
 
