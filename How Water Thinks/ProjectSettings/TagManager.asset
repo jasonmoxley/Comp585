@@ -57,6 +57,7 @@ TagManager:
   - zeroActive
   - ClOut
   - ClIn
+  - Enemy
   layers:
   - Default
   - TransparentFX
