@@ -995,6 +995,7 @@ GameObject:
   - component: {fileID: 1658478926}
   - component: {fileID: 1658478928}
   - component: {fileID: 1658478927}
+  - component: {fileID: 1658478929}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1054,7 +1055,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "You did it! After smoking the pipe, Dorothy can now see Kansas, Scarecrow
     can see a brain, Tin Man can see a heart, and Lion can see a bottle of courage.
-    \r\nYou have completed the game!"
+    \r\nYou have completed the game! See FinalScore Script."
 --- !u!222 &1658478928
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1062,6 +1063,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1658478925}
   m_CullTransparentMesh: 0
+--- !u!114 &1658478929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1658478925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91d413166e1848dc8665051caccbc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endingText: {fileID: 1658478927}
 --- !u!1 &1953226713
 GameObject:
   m_ObjectHideFlags: 0
