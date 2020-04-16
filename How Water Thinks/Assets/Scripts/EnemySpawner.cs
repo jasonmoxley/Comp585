@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D c) {
 		if (c.gameObject.tag == "Enemy") {
+			GameObject.Find("HitSound").GetComponent<AudioSource>().Play();
 			InvokeRepeating("Shrink", 0f, 0.1f);
 			Invoke("KillCharacter", 1f);
 
