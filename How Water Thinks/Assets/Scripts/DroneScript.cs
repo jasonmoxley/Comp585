@@ -19,7 +19,7 @@ public class DroneScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        if (c.gameObject.tag == "Lion")
+        if (c.gameObject.tag == "Enemy")
         {
             InvokeRepeating("Shrink", 0f, 0.1f);
             Invoke("KillCharacter", 1f);
@@ -37,10 +37,10 @@ public class DroneScript : MonoBehaviour {
 
     void Shrink()
     {
-        if (GameObject.Find("Lion").GetComponent<Transform>().transform.localScale.y > 0)
+        if (GameObject.Find("Dorthy").GetComponent<Transform>().transform.localScale.y > 0)
         {
-            GameObject.Find("Lion").GetComponent<Transform>().transform.localScale -= new Vector3(0, .05f, 0);
-            GameObject.Find("Lion").GetComponent<Transform>().transform.position -= new Vector3(0, .01f, 0); ;
+            GameObject.Find("Dorthy").GetComponent<Transform>().transform.localScale -= new Vector3(0, .05f, 0);
+            GameObject.Find("Dorthy").GetComponent<Transform>().transform.position -= new Vector3(0, .01f, 0); ;
 
         }
     }
