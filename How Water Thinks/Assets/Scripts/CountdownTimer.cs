@@ -13,12 +13,21 @@ public class CountdownTimer : MonoBehaviour {
     public string sceneName;
     public float startTime;
     public Scene currentScene;
+    public GameObject startScreen;
     // Use this for initialization
     void Start () {
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         //Time.time is the amount of time that the application has been running
         startTime = Time.time;
+        Time.timeScale = 0;
+        startScreen.SetActive(true);
+    }
+
+    public void startTimer()
+    {
+        startScreen.SetActive(false);
+        Time.timeScale = 1;
     }
     
     // Update is called once per frame

@@ -20,10 +20,14 @@ public class toggleReaction : MonoBehaviour {
     public GameObject NaForce2;
     public GameObject NaLiner;
     public GameObject NaLiner2;
+    public GameObject NaMidForce;
+    public GameObject NaMidLiner;
     public GameObject ClForce;
     public GameObject ClLiner;
     public GameObject KForce;
     public GameObject KLiner;
+    public GameObject KMidForce;
+    public GameObject KMidLiner;
     private float KOn = 0;
     private float NaOn = 0;
     private float ClOn = 0;
@@ -35,7 +39,6 @@ public class toggleReaction : MonoBehaviour {
         string sceneName = currentScene.name;
         if (sceneName == "Level 0")
         {
-            print("here");
             ZeroMembrane.SetActive(true);
             NaMembrane.SetActive(false);
             NaMembrane2.SetActive(false);
@@ -60,6 +63,10 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(false);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
         if (sceneName == "Level 3")
         {
@@ -77,6 +84,10 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(false);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
         if (sceneName == "Level 4")
         {
@@ -94,6 +105,10 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(false);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
 	}
 
@@ -116,12 +131,24 @@ public class toggleReaction : MonoBehaviour {
     public void HandleNaSlider(Slider slider)
     {
         NaOn = slider.value;
+        if (NaOn == 2 && KOn == 2)
+        {
+            KOn = 1;
+            if (GameObject.FindGameObjectWithTag("KChannelSlider") != null) GameObject.FindGameObjectWithTag("KChannelSlider").GetComponent<Slider>().value = 1;
+
+        }
         HandleChannelToggles();
     }
 
     public void HandleKSlider(Slider slider)
     {
         KOn = slider.value;
+        if (NaOn == 2 && KOn == 2)
+        {
+            NaOn = 1;
+            if (GameObject.FindGameObjectWithTag("NaChannelSlider") != null) GameObject.FindGameObjectWithTag("NaChannelSlider").GetComponent<Slider>().value = 1;
+
+        }
         HandleChannelToggles();
     }
 
@@ -134,7 +161,91 @@ public class toggleReaction : MonoBehaviour {
     public void HandleChannelToggles()
     {
         // print("NaOn: " + NaOn + " KOn: " + KOn + " ClOn: " + ClOn);
-        if (NaOn > 0 && KOn > 0 && ClOn > 0)
+        if (NaOn ==  2 && KOn == 1)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(true);
+            NaLiner.SetActive(true);
+            KLiner.SetActive(true);
+            ClLiner.SetActive(false);
+            NaForce.SetActive(true);
+            KForce.SetActive(true);
+            ClForce.SetActive(false);
+            NaMidForce.SetActive(true);
+            NaMidLiner.SetActive(true);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
+        }
+        else if (NaOn == 1 && KOn == 2)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(true);
+            NaLiner.SetActive(true);
+            KLiner.SetActive(true);
+            ClLiner.SetActive(false);
+            NaForce.SetActive(true);
+            KForce.SetActive(true);
+            ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(true);
+            KMidLiner.SetActive(true);
+        }
+        else if (NaOn == 2 && KOn == 0)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(true);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(false);
+            NaClKMembrane.SetActive(false);
+            NaLiner.SetActive(true);
+            KLiner.SetActive(false);
+            ClLiner.SetActive(false);
+            NaForce.SetActive(true);
+            KForce.SetActive(false);
+            ClForce.SetActive(false);
+            NaMidForce.SetActive(true);
+            NaMidLiner.SetActive(true);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
+        }
+        else if (NaOn == 0 && KOn == 2)
+        {
+            ZeroMembrane.SetActive(false);
+            NaMembrane.SetActive(false);
+            KMembrane.SetActive(false);
+            ClMembrane.SetActive(false);
+            NaClMembrane.SetActive(false);
+            NaKMembrane.SetActive(false);
+            ClKMembrane.SetActive(true);
+            NaClKMembrane.SetActive(false);
+            NaLiner.SetActive(false);
+            KLiner.SetActive(true);
+            ClLiner.SetActive(false);
+            NaForce.SetActive(false);
+            KForce.SetActive(true);
+            ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(true);
+            KMidLiner.SetActive(true);
+        }
+        else if (NaOn == 1 && KOn == 1 && ClOn == 1)
         {
             // print("NaKCl");
             ZeroMembrane.SetActive(false);
@@ -151,8 +262,12 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(true);
             KForce.SetActive(true);
             ClForce.SetActive(true);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
-        else if (KOn > 0 && ClOn > 0)
+        else if (KOn == 1 && ClOn == 1)
         {
             // print("KCl");
             ZeroMembrane.SetActive(false);
@@ -169,8 +284,12 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(true);
             ClForce.SetActive(true);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
-        else if (NaOn > 0 && ClOn > 0)
+        else if (NaOn == 1 && ClOn == 1)
         {
             // print("NaCl");
             ZeroMembrane.SetActive(false);
@@ -187,8 +306,12 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(true);
             KForce.SetActive(false);
             ClForce.SetActive(true);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
-        else if (NaOn > 0 && KOn > 0)
+        else if (NaOn == 1 && KOn == 1)
         {
             // print("NaK");
             ZeroMembrane.SetActive(false);
@@ -205,8 +328,12 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(true);
             KForce.SetActive(true);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
-        else if (NaOn > 0)
+        else if (NaOn == 1)
         {
             // print("Na");
             ZeroMembrane.SetActive(false);
@@ -223,8 +350,12 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(true);
             KForce.SetActive(false);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
-        else if (KOn > 0)
+        else if (KOn == 1)
         {
             // print("K");
             ZeroMembrane.SetActive(false);
@@ -241,8 +372,12 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(true);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
-        else if (ClOn > 0)
+        else if (ClOn == 1)
         {
             // print("Cl");
             ZeroMembrane.SetActive(false);
@@ -259,6 +394,10 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(false);
             ClForce.SetActive(true);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
         else {
             // print("zero");
@@ -276,6 +415,10 @@ public class toggleReaction : MonoBehaviour {
             NaForce.SetActive(false);
             KForce.SetActive(false);
             ClForce.SetActive(false);
+            NaMidForce.SetActive(false);
+            NaMidLiner.SetActive(false);
+            KMidForce.SetActive(false);
+            KMidLiner.SetActive(false);
         }
     }
 
