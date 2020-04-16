@@ -20,7 +20,7 @@ public class RunControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         popup.SetActive(false);
@@ -32,7 +32,7 @@ public class RunControl : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Fullscreen").Length > 0) GameObject.FindGameObjectWithTag("Fullscreen").GetComponent<Toggle>().isOn = Globals.fullscreenOn;
 
         if (Globals.colorblindOn) { (Resources.Load("Prefabs/sodiumAtom") as GameObject).GetComponent<Renderer>().material = Resources.Load("Materials/colorblind_sodium") as Material; } else { (Resources.Load("Prefabs/sodiumAtom") as GameObject).GetComponent<Renderer>().material = Resources.Load("Materials/sodiumAtom") as Material; }
-
+        
         /*AudioListener.volume = 0.5f;
         if (GameObject.FindGameObjectsWithTag("VolumeSlider").Length > 0) GameObject.FindGameObjectWithTag("VolumeSlider").GetComponent<Slider>().value = AudioListener.volume;
         Debug.Log(AudioListener.volume);
@@ -235,15 +235,19 @@ public class RunControl : MonoBehaviour
         float size = slider.value;
         GameObject[] sodiumAtomClones = GameObject.FindGameObjectsWithTag("SodiumAtom");
         GameObject[] potassiumAtomClones = GameObject.FindGameObjectsWithTag("PotassiumAtom");
+        GameObject[] chlorineAtomClones = GameObject.FindGameObjectsWithTag("ChlorineAtom");
 
 
-        print(size);
         Vector3 scaleChange = new Vector3(size, size, size);
         foreach (GameObject atomClone in sodiumAtomClones)
         {
             atomClone.transform.localScale = scaleChange;
         }
         foreach (GameObject atomClone in potassiumAtomClones)
+        {
+            atomClone.transform.localScale = scaleChange;
+        }
+        foreach (GameObject atomClone in chlorineAtomClones)
         {
             atomClone.transform.localScale = scaleChange;
         }
@@ -338,7 +342,11 @@ public class RunControl : MonoBehaviour
                 clOnBottom++;
             }
         }
-        int voltage = (naOnBottom + kOnBottom + clOnTop) - (naOnTop + kOnTop + clOnBottom);
+        float rTF = 14.06f;
+        float voltage = (naOnBottom + kOnBottom + clOnTop) - (naOnTop + kOnTop + clOnBottom);
+        if (voltage > 0) voltage = rTF * Mathf.Log(voltage);
+        else if (voltage < 0) voltage = rTF * -Mathf.Log(-voltage);
+        else voltage = 0;
         if (sceneName == "Level 0")
         {
             if (naOnBottom >= 70)
@@ -357,7 +365,7 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 3")
         {
-            if ((voltage >= 65) || (voltage <= -65))
+            if ((voltage >= 60) || (voltage <= -60))
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
@@ -365,11 +373,11 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 4")
         {
-            if (voltage <= 5)
-            {
-                Time.timeScale = 0;
-                popup.SetActive(true);
-            }
+            // if (voltage <= 5)
+            // {
+            //     Time.timeScale = 0;
+            //     popup.SetActive(true);
+            // }
         }
     }
 

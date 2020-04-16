@@ -32,20 +32,24 @@ public class SceneChanger : MonoBehaviour {
     public void LoadLevel0()
     {
         SceneManager.LoadScene("Level 0");
+        GameObject.FindGameObjectWithTag("startgame").SetActive(true);
     }
 
     public void LoadLevel1()
     {
+        Time.timeScale = 0;
         SceneManager.LoadScene("Level 1");
     }
 
     public void LoadLevel2()
     {
+        Time.timeScale = 0;
         SceneManager.LoadScene("Level 3");
     }
 
     public void LoadLevel3()
     {
+        Time.timeScale = 0;
         SceneManager.LoadScene("Level 4");
     }
     public void LoadTransition1()

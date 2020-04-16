@@ -57,7 +57,10 @@ TagManager:
   - zeroActive
   - ClOut
   - ClIn
+  - KChannelSlider
+  - startgame
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
