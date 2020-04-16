@@ -125,7 +125,7 @@ public class AtomCount : MonoBehaviour {
         }
         oldVoltage = voltage;
         if (GameObject.FindGameObjectWithTag("Voltage") != null) GameObject.FindGameObjectWithTag("Voltage").GetComponent<Slider>().value = voltage;
-        if (GameObject.FindGameObjectWithTag("VoltageText") != null) GameObject.FindGameObjectWithTag("VoltageText").GetComponent<Text>().text = "Voltage: " + voltage;
+        if (GameObject.FindGameObjectWithTag("VoltageText") != null) GameObject.FindGameObjectWithTag("VoltageText").GetComponent<Text>().text = "" + voltage;
         //print(NaAtomsOut + KAtomsOut);
         //print(KAtomsIn + NaAtomsIn);
         //print("voltage: " + voltage);
@@ -151,12 +151,12 @@ public class AtomCount : MonoBehaviour {
         // }
 
         
-        if (GameObject.FindGameObjectWithTag("NaOut") != null) GameObject.FindGameObjectWithTag("NaOut").GetComponent<Text>().text = "Na Outside: " + NaAtomsOut;
-        if (GameObject.FindGameObjectWithTag("NaIn") != null) GameObject.FindGameObjectWithTag("NaIn").GetComponent<Text>().text = "Na Inside: " + NaAtomsIn;
-        if (GameObject.FindGameObjectWithTag("KOut") != null) GameObject.FindGameObjectWithTag("KOut").GetComponent<Text>().text = "K Outside: " + KAtomsOut;
-        if (GameObject.FindGameObjectWithTag("KIn") != null) GameObject.FindGameObjectWithTag("KIn").GetComponent<Text>().text = "K Inside: " + KAtomsIn;
-        if (GameObject.FindGameObjectWithTag("ClOut") != null) GameObject.FindGameObjectWithTag("ClOut").GetComponent<Text>().text = "Cl Outside: " + ClAtomsOut;
-        if (GameObject.FindGameObjectWithTag("ClIn") != null) GameObject.FindGameObjectWithTag("ClIn").GetComponent<Text>().text = "Cl Inside: " + ClAtomsIn;
+        if (GameObject.FindGameObjectWithTag("NaOut") != null) GameObject.FindGameObjectWithTag("NaOut").GetComponent<Text>().text = "" + NaAtomsOut;
+        if (GameObject.FindGameObjectWithTag("NaIn") != null) GameObject.FindGameObjectWithTag("NaIn").GetComponent<Text>().text = "" + NaAtomsIn;
+        if (GameObject.FindGameObjectWithTag("KOut") != null) GameObject.FindGameObjectWithTag("KOut").GetComponent<Text>().text = "" + KAtomsOut;
+        if (GameObject.FindGameObjectWithTag("KIn") != null) GameObject.FindGameObjectWithTag("KIn").GetComponent<Text>().text = "" + KAtomsIn;
+        if (GameObject.FindGameObjectWithTag("ClOut") != null) GameObject.FindGameObjectWithTag("ClOut").GetComponent<Text>().text = "" + ClAtomsOut;
+        if (GameObject.FindGameObjectWithTag("ClIn") != null) GameObject.FindGameObjectWithTag("ClIn").GetComponent<Text>().text = "" + ClAtomsIn;
 
         /*Old voltage outer code block
         if (voltageOuter > 0) GameObject.FindGameObjectWithTag("VoltageOutsideCounterText").GetComponent<Text>().text = "Voltage Outside: " + System.Math.Round(Mathf.Log(voltageOuter), 2) + " mV";

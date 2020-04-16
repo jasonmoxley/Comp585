@@ -57,6 +57,8 @@ TagManager:
   - zeroActive
   - ClOut
   - ClIn
+  - KChannelSlider
+  - startgame
   - Enemy
   layers:
   - Default

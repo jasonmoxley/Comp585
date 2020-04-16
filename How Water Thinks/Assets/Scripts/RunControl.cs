@@ -20,7 +20,7 @@ public class RunControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         popup.SetActive(false);
