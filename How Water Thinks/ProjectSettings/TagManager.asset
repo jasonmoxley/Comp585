@@ -59,6 +59,7 @@ TagManager:
   - ClIn
   - KChannelSlider
   - startgame
+  - Enemy
   layers:
   - Default
   - TransparentFX
