@@ -60,6 +60,7 @@ TagManager:
   - KChannelSlider
   - startgame
   - Enemy
+  - ground
   layers:
   - Default
   - TransparentFX
