@@ -58,6 +58,7 @@ TagManager:
   - ClOut
   - ClIn
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
