@@ -42,19 +42,19 @@ public class CountdownTimer : MonoBehaviour {
         sceneName = currentScene.name;
         if (sceneName == "Level 0")
         {
-            if (t > 35)
+            if (t > 55)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
-            else if (t > 25)
+            else if (t > 45)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
             }
-            else if (t > 20)
+            else if (t > 35)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
@@ -96,19 +96,19 @@ public class CountdownTimer : MonoBehaviour {
         }
         else if (sceneName == "Level 3")
         {
-            if (t > 50)
+            if (t > 60)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
-            else if (t > 40)
+            else if (t > 50)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
             }
-            else if (t > 35)
+            else if (t > 40)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
@@ -150,16 +150,73 @@ public class CountdownTimer : MonoBehaviour {
         }
     }
 
-    	public void UpdateScore () {
-		if (star1.activeSelf) {
-			Globals.totalStars++;
-		}
-		if (star2.activeSelf) {
-			Globals.totalStars++;
-		}
-		if (star3.activeSelf) {
-			Globals.totalStars++;
-		}
+    public void UpdateScore () {
+        sceneName = currentScene.name;
+        if (sceneName == "Level 0")
+        {
+            Globals.level0stars = 0;
+            if (star1.activeSelf) {
+                Globals.level0stars++;
+			    Globals.totalStars++;
+            }
+            if (star2.activeSelf) {
+                Globals.level0stars++;
+                Globals.totalStars++;
+            }
+            if (star3.activeSelf) {
+                Globals.level0stars++;
+                Globals.totalStars++;
+            }
+        }
+        if (sceneName == "Level 1")
+        {
+            Globals.level1stars = 0;
+            if (star1.activeSelf) {
+                Globals.level1stars++;
+			    Globals.totalStars++;
+            }
+            if (star2.activeSelf) {
+                Globals.level1stars++;
+                Globals.totalStars++;
+            }
+            if (star3.activeSelf) {
+                Globals.level1stars++;
+                Globals.totalStars++;
+            }
+        }
+        if (sceneName == "Level 3")
+        {
+            Globals.level2stars = 0;
+            if (star1.activeSelf) {
+                Globals.level2stars++;
+			    Globals.totalStars++;
+            }
+            if (star2.activeSelf) {
+                Globals.level2stars++;
+                Globals.totalStars++;
+            }
+            if (star3.activeSelf) {
+                Globals.level2stars++;
+                Globals.totalStars++;
+            }
+        }
+        if (sceneName == "Level 4")
+        {
+            Globals.level3stars = 0;
+            if (star1.activeSelf) {
+                Globals.level3stars++;
+			    Globals.totalStars++;
+            }
+            if (star2.activeSelf) {
+                Globals.level3stars++;
+                Globals.totalStars++;
+            }
+            if (star3.activeSelf) {
+                Globals.level3stars++;
+                Globals.totalStars++;
+            }
+        }
+		
         print("Total Score: " + Globals.totalStars);
     }
 

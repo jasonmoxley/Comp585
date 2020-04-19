@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AtomCount : MonoBehaviour {
 
     float targetVoltage;
     int i = 0;
     public int KAtomsOut;
+    public int OldKAtomsOut;
     public int KAtomsIn;
     public int NaAtomsOut;
+    public int OldNaAtomsOut;
     public int NaAtomsIn;
     public int ClAtomsOut;
+    public int OldClAtomsOut;
     public int ClAtomsIn;
     public int numAtomsOuter;
     public int numAtomsInner;
@@ -23,11 +27,47 @@ public class AtomCount : MonoBehaviour {
     public float minVoltage;
     public float maxVoltage;
     public GameObject zeroMembrane;
+    public Scene currentScene;
+    public string sceneName;
+    public float naslider = 0;
+    public float kslider = 0;
+    public float clslider = 0;
 
     // Use this for initialization
     void Start () {
         targetVoltage = 0;
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        if (sceneName == "Level 0") {
+            OldNaAtomsOut = 150;
+            OldKAtomsOut = 0;
+            OldClAtomsOut = 0;
+        } else if (sceneName == "Level 1") {
+            OldNaAtomsOut = 100;
+            OldKAtomsOut = 0;
+            OldClAtomsOut = 0;
+        } else if (sceneName == "Level 3") {
+            OldNaAtomsOut = 150;
+            OldKAtomsOut = 0;
+            OldClAtomsOut = 0;
+        } else if (sceneName == "Level 4") {
+            OldNaAtomsOut = 50;
+            OldKAtomsOut = 0;
+            OldClAtomsOut = 50;
+        }
 	}
+
+    public void updateNaSlider(Slider slider) {
+        naslider = slider.value;
+    }
+
+    public void updateKSlider(Slider slider) {
+        kslider = slider.value;
+    }
+
+    public void updateClSlider(Slider slider) {
+        clslider = slider.value;
+    }
 
     public float getTargetVoltage()
     {
@@ -107,16 +147,38 @@ public class AtomCount : MonoBehaviour {
             }
 
         }
-        // voltage = (NaAtomsIn + KAtomsIn + ClAtomsOut) - (NaAtomsOut + KAtomsOut + ClAtomsIn);
-        if (oldVoltage == 0) {oldVoltage = voltage;}
+        
         //print(zeroMembrane.active);
-        if (voltage != oldVoltage) {
+        if (NaAtomsOut != OldNaAtomsOut) {
             if(zeroMembrane.active == false)
             {
-                GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
+                if(naslider != 0)
+                {
+                    GameObject.Find("NaSound").GetComponent<AudioSource>().Play();
+                }
             }
         }
-        oldVoltage = voltage;
+        if (KAtomsOut != OldKAtomsOut) {
+            if(zeroMembrane.active == false)
+            {
+                if(kslider != 0)
+                {
+                    GameObject.Find("KSound").GetComponent<AudioSource>().Play();
+                }
+            }
+        }
+        if (ClAtomsOut != OldClAtomsOut) {
+            if(zeroMembrane.active == false)
+            {
+                if (clslider != 0)
+                {
+                    GameObject.Find("ClSound").GetComponent<AudioSource>().Play();
+                }
+            }
+        }
+        OldNaAtomsOut = NaAtomsOut;
+        OldKAtomsOut = KAtomsOut;
+        OldClAtomsOut = ClAtomsOut;
         
         float rTF = 14.06f;
         // string deltaVCountText;

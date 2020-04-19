@@ -357,7 +357,7 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 1")
         {
-            if ((naOnBottom >= 45) || (kOnTop >= 45))
+            if ((naOnBottom >= 40) && (kOnTop >= 40))
             {
                 Time.timeScale = 0;
                 popup.SetActive(true);
