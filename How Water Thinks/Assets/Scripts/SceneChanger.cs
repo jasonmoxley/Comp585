@@ -138,6 +138,11 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene("Credits");
     }
 
+    public void starScene()
+    {
+        SceneManager.LoadScene("Stars");
+    }
+
     public void exitScene()
     {
         Application.Quit();
