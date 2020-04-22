@@ -19,19 +19,18 @@ public class DroneScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        if (c.gameObject.tag == "Enemy")
+        if (c.gameObject.name  == "Dorthy")
         {
             InvokeRepeating("Shrink", 0f, 0.1f);
             Invoke("KillCharacter", 1f);
 
         }
-        if (c.gameObject.tag == "Ground")
+        if (c.gameObject.tag == "Ground" && this.tag == "Enemy")
         {
             // sprite needs to change
+            Instantiate(crash, Drone.transform.position, Quaternion.identity);
             Destroy(Drone);
-            Instantiate(crash, new Vector3(17, 2, -4), Quaternion.identity);
-            Instantiate(crash, new Vector3(18, 2, -4), Quaternion.identity);
-            Instantiate(crash, new Vector3(19, 2, -4), Quaternion.identity);
+
         }
     }
 

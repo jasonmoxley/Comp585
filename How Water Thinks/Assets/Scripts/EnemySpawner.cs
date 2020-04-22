@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		i = 0;
-		InvokeRepeating("Spawn", 0f, .05f);
+		InvokeRepeating("Spawn", 0f, .1f);  //.05f for hard
 	}
 	
 
