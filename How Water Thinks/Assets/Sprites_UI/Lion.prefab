@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212584113509460550}
   - component: {fileID: 95745558713456250}
   - component: {fileID: 114219448242087238}
+  - component: {fileID: 114552537223510660}
   m_Layer: 0
   m_Name: Lion
   m_TagString: Lion
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1129214871929228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.649464, y: -2.381177, z: -2}
+  m_LocalPosition: {x: 0, y: 2.6, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,7 +52,7 @@ Animator:
   m_GameObject: {fileID: 1129214871929228}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3e5786ff77f34f9d886d9a07b1ee7eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 248f0af0047de4e44bedd794ead2d9d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -69,6 +70,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8337cce80399c49c1b0554ee0a0db683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114552537223510660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129214871929228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8986ef7b44ee5450693c9f758a2080c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212584113509460550
@@ -106,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 981cdb39e4fc14a19aff5b3ee1ad5c0e, type: 3}
+  m_Sprite: {fileID: 21300088, guid: 72b9723d384e444ab85d332dd227c070, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
