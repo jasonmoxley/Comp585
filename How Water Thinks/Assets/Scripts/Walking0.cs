@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Walking0 : MonoBehaviour {
     public GameObject Drone;
+    public bool drone1IsCreated = false;
+    public bool drone2IsCreated = false;
+
      
-    float speed = 2.0f;
+    float speed = 1.5f;
     public void NextScene()
     {
         SceneManager.LoadScene("Transition 1");
@@ -17,19 +20,27 @@ public class Walking0 : MonoBehaviour {
         {
             NextScene();
         }
-        if (GameObject.FindGameObjectWithTag("Lion").transform.position.x >= 14)
+        if (GameObject.FindGameObjectWithTag("Lion").transform.position.x >= 5 && drone1IsCreated == false)
         {
-            if (GameObject.FindGameObjectWithTag("Lion").transform.position.x <= 14.05f)
-            {
-                spawnDrones();
-            }
+            spawnDrones(8);
+            drone1IsCreated = true;
+
         }
+
+        if (GameObject.FindGameObjectWithTag("Lion").transform.position.x >= 14 && drone2IsCreated == false)
+        {
+            spawnDrones(17);
+            drone2IsCreated = true;
+
+        }
+
     }
-    public void spawnDrones()
+    public void spawnDrones(float x)
     {
-        Instantiate(Drone, new Vector3(17, 3.5f, -4), Quaternion.identity);
-        Instantiate(Drone, new Vector3(18, 4, -4), Quaternion.identity);
-        Instantiate(Drone, new Vector3(19, 3.5f, -4), Quaternion.identity);
+        Instantiate(Drone, new Vector3(x, 3.5f, -4), Quaternion.identity);
+        Instantiate(Drone, new Vector3(x + 1.5f, 4, -4), Quaternion.identity);
+        Instantiate(Drone, new Vector3(x + 3, 3.5f, -4), Quaternion.identity);
+
 
     }
 
