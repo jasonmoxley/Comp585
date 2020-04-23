@@ -138,6 +138,11 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene("Credits");
     }
 
+    public void spriteCredit()
+    {
+        SceneManager.LoadScene("SpriteCredits");
+    }
+
     public void starScene()
     {
         SceneManager.LoadScene("Stars");
