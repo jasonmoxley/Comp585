@@ -373,11 +373,14 @@ public class RunControl : MonoBehaviour
         }
         else if (sceneName == "Level 4")
         {
-            // if (voltage <= 5)
-            // {
-            //     Time.timeScale = 0;
-            //     popup.SetActive(true);
-            // }
+            if (kOnTop >= 15)
+            {
+                if (voltage >= -5)
+                {
+                    Time.timeScale = 0;
+                    popup.SetActive(true);
+                }
+            }
         }
     }
 

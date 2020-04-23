@@ -123,19 +123,19 @@ public class CountdownTimer : MonoBehaviour {
         }
         else if (sceneName == "Level 4")
         {
-            if (t > 50)
+            if (t > 120)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
-            else if (t > 40)
+            else if (t > 105)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
             }
-            else if (t > 35)
+            else if (t > 90)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
