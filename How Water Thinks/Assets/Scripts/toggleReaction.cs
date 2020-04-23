@@ -134,6 +134,7 @@ public class toggleReaction : MonoBehaviour {
         if (NaOn == 2 && KOn == 2)
         {
             KOn = 1;
+            print("reducing k slider");
             if (GameObject.FindGameObjectWithTag("KChannelSlider") != null) GameObject.FindGameObjectWithTag("KChannelSlider").GetComponent<Slider>().value = 1;
 
         }
@@ -146,6 +147,7 @@ public class toggleReaction : MonoBehaviour {
         if (NaOn == 2 && KOn == 2)
         {
             NaOn = 1;
+            print("reducing na slider");
             if (GameObject.FindGameObjectWithTag("NaChannelSlider") != null) GameObject.FindGameObjectWithTag("NaChannelSlider").GetComponent<Slider>().value = 1;
 
         }

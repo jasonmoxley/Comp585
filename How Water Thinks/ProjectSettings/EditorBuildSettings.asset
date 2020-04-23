@@ -95,4 +95,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stars.unity
     guid: ad46b1a7c58159242b7829bc88b39a0e
+  - enabled: 1
+    path: Assets/Scenes/SpriteCredits.unity
+    guid: 027ce5ec474b14d78b655959d170ef89
   m_configObjects: {}

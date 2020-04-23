@@ -9,6 +9,9 @@ public class CountdownTimer : MonoBehaviour {
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
+    public GameObject star1end;
+    public GameObject star2end;
+    public GameObject star3end;
     public Text timerText;
     public string sceneName;
     public float startTime;
@@ -47,24 +50,36 @@ public class CountdownTimer : MonoBehaviour {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                star1end.SetActive(false);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 45)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 35)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(false);
             }
             else
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(true);
             }
         }
         else if (sceneName == "Level 1")
@@ -74,24 +89,36 @@ public class CountdownTimer : MonoBehaviour {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                star1end.SetActive(false);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 55)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 45)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(false);
             }
             else
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(true);
             }
         }
         else if (sceneName == "Level 3")
@@ -101,24 +128,36 @@ public class CountdownTimer : MonoBehaviour {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                star1end.SetActive(false);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 50)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 40)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(false);
             }
             else
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(true);
             }
         }
         else if (sceneName == "Level 4")
@@ -128,95 +167,115 @@ public class CountdownTimer : MonoBehaviour {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                star1end.SetActive(false);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 105)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(false);
+                star3end.SetActive(false);
             }
             else if (t > 90)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(true);
             }
             else
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                star1end.SetActive(true);
+                star2end.SetActive(true);
+                star3end.SetActive(true);
             }
         }
     }
 
     public void UpdateScore () {
         sceneName = currentScene.name;
+        int tempLevel0 = 0;
+        int tempLevel1 = 0;
+        int tempLevel2 = 0;
+        int tempLevel3 = 0;
         if (sceneName == "Level 0")
         {
             Globals.level0stars = 0;
             if (star1.activeSelf) {
-                Globals.level0stars++;
-			    Globals.totalStars++;
+                tempLevel0++;
             }
             if (star2.activeSelf) {
-                Globals.level0stars++;
-                Globals.totalStars++;
+                tempLevel0++;
             }
             if (star3.activeSelf) {
-                Globals.level0stars++;
-                Globals.totalStars++;
+                tempLevel0++;
+            }
+            if (tempLevel0 > Globals.level0stars)
+            {
+                Globals.level0stars = tempLevel0;
             }
         }
         if (sceneName == "Level 1")
         {
             Globals.level1stars = 0;
             if (star1.activeSelf) {
-                Globals.level1stars++;
-			    Globals.totalStars++;
+                tempLevel1++;
             }
             if (star2.activeSelf) {
-                Globals.level1stars++;
-                Globals.totalStars++;
+                tempLevel1++;
             }
             if (star3.activeSelf) {
-                Globals.level1stars++;
-                Globals.totalStars++;
+                tempLevel1++;
+            }
+            if (tempLevel1 > Globals.level1stars)
+            {
+                Globals.level1stars =  tempLevel1;
             }
         }
         if (sceneName == "Level 3")
         {
             Globals.level2stars = 0;
             if (star1.activeSelf) {
-                Globals.level2stars++;
-			    Globals.totalStars++;
+                tempLevel2++;
             }
             if (star2.activeSelf) {
-                Globals.level2stars++;
-                Globals.totalStars++;
+                tempLevel2++;
             }
             if (star3.activeSelf) {
-                Globals.level2stars++;
-                Globals.totalStars++;
+                tempLevel2++;
+            }
+            if (tempLevel2 > Globals.level2stars)
+            {
+                Globals.level2stars = tempLevel2;
             }
         }
         if (sceneName == "Level 4")
         {
             Globals.level3stars = 0;
             if (star1.activeSelf) {
-                Globals.level3stars++;
-			    Globals.totalStars++;
+                tempLevel3++;
             }
             if (star2.activeSelf) {
-                Globals.level3stars++;
-                Globals.totalStars++;
+                tempLevel3++;
             }
             if (star3.activeSelf) {
-                Globals.level3stars++;
-                Globals.totalStars++;
+                tempLevel3++;
+            }
+            if (tempLevel3 > Globals.level3stars)
+            {
+                Globals.level3stars = tempLevel3;
             }
         }
-		
+		Globals.totalStars = Globals.level0stars + Globals.level1stars + Globals.level2stars + Globals.level3stars;
         print("Total Score: " + Globals.totalStars);
     }
 
