@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -474,6 +474,16 @@ Prefab:
       value: 
       objectReference: {fileID: 21300088, guid: 72b9723d384e444ab85d332dd227c070,
         type: 3}
+    - target: {fileID: 114219448242087238, guid: 5038d5d3cf55d48449f2c2b1111a7282,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552537223510660, guid: 5038d5d3cf55d48449f2c2b1111a7282,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5038d5d3cf55d48449f2c2b1111a7282, type: 2}
   m_IsPrefabAsset: 0
@@ -491,6 +501,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8986ef7b44ee5450693c9f758a2080c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &388932215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 388932213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0cc48232a7847b4b0c778d7b2b21b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &501580190
@@ -1211,6 +1232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8337cce80399c49c1b0554ee0a0db683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Drone: {fileID: 0}
+  drone1IsCreated: 0
+  drone2IsCreated: 0
 --- !u!95 &1742672753
 Animator:
   serializedVersion: 3

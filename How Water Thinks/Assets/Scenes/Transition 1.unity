@@ -308,9 +308,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dorothy runs into the corn fields to avoid the laser strikes. There she
-    meets Scarecrow, who was hit by one of the drones and lost quite a bit of straw
-    ions. You have to help him balance out the ones he has left!
+  m_Text: Dorothy runs into the corn fields to avoid the other drones. There she meets
+    Scarecrow, who was hit by one of the drones and lost quite a bit of straw ions.
+    You have to help him balance out the ones he has left!
 --- !u!222 &756988922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 775, y: -359}
+  m_AnchoredPosition: {x: 750, y: -359}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762173289
@@ -793,6 +793,7 @@ MonoBehaviour:
   timerText: {fileID: 0}
   sceneName: 
   startTime: 0
+  startScreen: {fileID: 0}
 --- !u!114 &2023486902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,10 +964,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KAtomsOut: 0
+  OldKAtomsOut: 0
   KAtomsIn: 0
   NaAtomsOut: 0
+  OldNaAtomsOut: 0
   NaAtomsIn: 0
   ClAtomsOut: 0
+  OldClAtomsOut: 0
   ClAtomsIn: 0
   numAtomsOuter: 0
   numAtomsInner: 0
@@ -978,6 +982,10 @@ MonoBehaviour:
   minVoltage: 0
   maxVoltage: 0
   zeroMembrane: {fileID: 0}
+  sceneName: 
+  naslider: 0
+  kslider: 0
+  clslider: 0
 --- !u!114 &2023486909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,10 +1010,14 @@ MonoBehaviour:
   NaForce2: {fileID: 0}
   NaLiner: {fileID: 0}
   NaLiner2: {fileID: 0}
+  NaMidForce: {fileID: 0}
+  NaMidLiner: {fileID: 0}
   ClForce: {fileID: 0}
   ClLiner: {fileID: 0}
   KForce: {fileID: 0}
   KLiner: {fileID: 0}
+  KMidForce: {fileID: 0}
+  KMidLiner: {fileID: 0}
 --- !u!114 &2023486910
 MonoBehaviour:
   m_ObjectHideFlags: 0

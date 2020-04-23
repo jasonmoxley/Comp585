@@ -28,6 +28,7 @@ public class DroneScript : MonoBehaviour {
         if (c.gameObject.tag == "Ground" && this.tag == "Enemy")
         {
             // sprite needs to change
+            GameObject.Find("HitSound").GetComponent<AudioSource>().Play();
             Instantiate(crash, Drone.transform.position, Quaternion.identity);
             Destroy(Drone);
 
