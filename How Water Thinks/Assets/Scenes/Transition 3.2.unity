@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,6 +157,7 @@ MonoBehaviour:
   timerText: {fileID: 0}
   sceneName: 
   startTime: 0
+  startScreen: {fileID: 0}
 --- !u!114 &123979831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,10 +328,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KAtomsOut: 0
+  OldKAtomsOut: 0
   KAtomsIn: 0
   NaAtomsOut: 0
+  OldNaAtomsOut: 0
   NaAtomsIn: 0
   ClAtomsOut: 0
+  OldClAtomsOut: 0
   ClAtomsIn: 0
   numAtomsOuter: 0
   numAtomsInner: 0
@@ -342,6 +346,10 @@ MonoBehaviour:
   minVoltage: 0
   maxVoltage: 0
   zeroMembrane: {fileID: 0}
+  sceneName: 
+  naslider: 0
+  kslider: 0
+  clslider: 0
 --- !u!114 &123979838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,10 +374,14 @@ MonoBehaviour:
   NaForce2: {fileID: 0}
   NaLiner: {fileID: 0}
   NaLiner2: {fileID: 0}
+  NaMidForce: {fileID: 0}
+  NaMidLiner: {fileID: 0}
   ClForce: {fileID: 0}
   ClLiner: {fileID: 0}
   KForce: {fileID: 0}
   KLiner: {fileID: 0}
+  KMidForce: {fileID: 0}
+  KMidLiner: {fileID: 0}
 --- !u!114 &123979839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 754, y: -280}
+  m_AnchoredPosition: {x: 750, y: -280}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049518603
