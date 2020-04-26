@@ -16,7 +16,6 @@ public class HandleForceTrigger : MonoBehaviour
 
  void OnCollisionEnter(Collision c)
   {
-        print("testing, please work");
         float slider = GameObject.FindGameObjectWithTag("moleculeSize").GetComponent<Slider>().value;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
