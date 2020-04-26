@@ -16192,7 +16192,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -16203,8 +16203,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reach a -70 voltage then move the chlorine molecules to go back to a 0 voltage
-    across the membrane! The faster you do it the more stars you get!
+  m_Text: Reach a -70 voltage without moving the Na and Cl Molecules. Then close the
+    K Filter and move the chlorine molecules to go back to a 0 voltage across the
+    membrane! The faster you do it the more stars you get!
 --- !u!222 &1397227917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17187,7 +17188,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -350, y: -20}
-  m_SizeDelta: {x: 700, y: 150}
+  m_SizeDelta: {x: 700, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479985301
 MonoBehaviour:
@@ -17221,9 +17222,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reach a -70 voltage  without moving the Na Molecules. Then close the K Filter
-    and move the chlorine molecules to go back to a 0 voltage across the membrane!
-    The faster you do it the more stars you get!
+  m_Text: Reach a -70 voltage without moving the Na and Cl Molecules. Then close the
+    K Filter and move the chlorine molecules to go back to a 0 voltage across the
+    membrane! The faster you do it the more stars you get!
 --- !u!222 &1479985302
 CanvasRenderer:
   m_ObjectHideFlags: 0
