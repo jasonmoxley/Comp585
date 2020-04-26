@@ -62,6 +62,7 @@ TagManager:
   - Enemy
   - Ground
   - crashed
+  - moleculeSize
   layers:
   - Default
   - TransparentFX

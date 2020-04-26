@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HandleForceTrigger : MonoBehaviour
 {
@@ -15,10 +16,16 @@ public class HandleForceTrigger : MonoBehaviour
 
  void OnCollisionEnter(Collision c)
   {
-        //print("here");
+        print("testing, please work");
+        float slider = GameObject.FindGameObjectWithTag("moleculeSize").GetComponent<Slider>().value;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "Level 4") {
+        if (slider > 0.25)
+        {
+            print("size slider too big");
+            return;
+        }
+        else if (sceneName == "Level 4") {
             // print("here");
             if (this.tag == "NaForce")
             {
@@ -51,7 +58,7 @@ public class HandleForceTrigger : MonoBehaviour
                 }
             }
         }
-        if (sceneName == "Level 3") {
+        else if (sceneName == "Level 3") {
             //float voltageOuter = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltageOuter();
             //float voltageInner = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltageInner();
             float totalVoltage = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltage();
@@ -169,6 +176,7 @@ public class HandleForceTrigger : MonoBehaviour
             }
         }
         else { // level 1 or 2
+            print("return statement not working");
             if (this.tag == "NaForce")
             {
                 if (c.gameObject.tag == "SodiumAtom")
