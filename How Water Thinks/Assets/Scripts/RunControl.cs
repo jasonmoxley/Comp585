@@ -233,23 +233,26 @@ public class RunControl : MonoBehaviour
     public void ballSlider(Slider slider)
     {
         float size = slider.value;
+        float clSize = (float) (size + 0.05);
         GameObject[] sodiumAtomClones = GameObject.FindGameObjectsWithTag("SodiumAtom");
         GameObject[] potassiumAtomClones = GameObject.FindGameObjectsWithTag("PotassiumAtom");
         GameObject[] chlorineAtomClones = GameObject.FindGameObjectsWithTag("ChlorineAtom");
 
 
-        Vector3 scaleChange = new Vector3(size, size, size);
+        Vector3 scaleChangeNa = new Vector3(size, size, size);
+        Vector3 scaleChangeK = new Vector3(size, size, size);
+        Vector3 scaleChangeCl = new Vector3(clSize, clSize, clSize);
         foreach (GameObject atomClone in sodiumAtomClones)
         {
-            atomClone.transform.localScale = scaleChange;
+            atomClone.transform.localScale = scaleChangeNa;
         }
         foreach (GameObject atomClone in potassiumAtomClones)
         {
-            atomClone.transform.localScale = scaleChange;
+            atomClone.transform.localScale = scaleChangeK;
         }
         foreach (GameObject atomClone in chlorineAtomClones)
         {
-            atomClone.transform.localScale = scaleChange;
+            atomClone.transform.localScale = scaleChangeCl;
         }
     }
 
