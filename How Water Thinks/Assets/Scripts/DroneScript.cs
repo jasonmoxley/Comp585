@@ -7,11 +7,18 @@ public class DroneScript : MonoBehaviour {
     public GameObject Drone;
     public GameObject popup;
     public GameObject crash;
+    public GameObject droneSound;
     //int i;
 
     // Use this for initialization
     void Start()
     {
+        if (this.name != "Drones") {
+            droneSound.GetComponent<AudioSource>().Play();
+        }
+
+
+        
         //i = 0;
         //InvokeRepeating("Spawn", 0f, .05f);
     }
@@ -28,6 +35,7 @@ public class DroneScript : MonoBehaviour {
         if (c.gameObject.tag == "Ground" && this.tag == "Enemy")
         {
             // sprite needs to change
+            droneSound.GetComponent<AudioSource>().Stop();
             GameObject.Find("HitSound").GetComponent<AudioSource>().Play();
             Instantiate(crash, Drone.transform.position, Quaternion.identity);
             Destroy(Drone);

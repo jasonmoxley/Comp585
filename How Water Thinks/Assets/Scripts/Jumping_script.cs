@@ -38,6 +38,7 @@ using System.Collections;
      
      public float jumpHeight = 2f; 
      public static bool isJumping = false;
+     public GameObject jumpSound;
         // public bool isGrounded = true;
          Rigidbody rb;
          void Start(){
@@ -50,6 +51,7 @@ using System.Collections;
 {
     isJumping = true;
    gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpHeight), ForceMode2D.Impulse);
+   jumpSound.GetComponent<AudioSource>().Play();
 }
          }
 
