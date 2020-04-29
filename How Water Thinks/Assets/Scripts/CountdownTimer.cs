@@ -17,6 +17,7 @@ public class CountdownTimer : MonoBehaviour {
     public float startTime;
     public Scene currentScene;
     public GameObject startScreen;
+    public GameObject startScreen2;
     // Use this for initialization
     void Start () {
         currentScene = SceneManager.GetActiveScene();
@@ -25,6 +26,18 @@ public class CountdownTimer : MonoBehaviour {
         startTime = Time.time;
         Time.timeScale = 0;
         startScreen.SetActive(true);
+    }
+
+    public void nextStart()
+    {
+        startScreen.SetActive(false);
+        startScreen2.SetActive(true);
+    }
+
+    public void lastStart()
+    {
+        startScreen2.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void startTimer()
@@ -187,7 +200,7 @@ public class CountdownTimer : MonoBehaviour {
                 star3.SetActive(true);
                 star1end.SetActive(true);
                 star2end.SetActive(true);
-                star3end.SetActive(true);
+                star3end.SetActive(false);
             }
             else
             {

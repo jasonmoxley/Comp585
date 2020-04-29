@@ -21,7 +21,6 @@ public class HandleForceTrigger : MonoBehaviour
         string sceneName = currentScene.name;
         if (slider > 0.25)
         {
-            print("size slider too big");
             return;
         }
         else if (sceneName == "Level 4") {
@@ -46,136 +45,17 @@ public class HandleForceTrigger : MonoBehaviour
             {
                 if (c.gameObject.tag == "ChlorineAtom")
                 {
+                    //making the chloride channel one way for the last level
+                    //only flows from bottom to top
                     if (c.gameObject.transform.position.y < 214.95)
                     {
                         Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
                     }
-                    else
-                    {
-                        return;
-                    }
                 }
             }
         }
-        else if (sceneName == "Level 3") {
-            //float voltageOuter = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltageOuter();
-            //float voltageInner = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltageInner();
-            float totalVoltage = GameObject.FindGameObjectWithTag("RunControl").GetComponent<AtomCount>().getVoltage();
-            //print(totalVoltage);
-            if (totalVoltage >= 70) {
-                if (this.tag == "NaForce")
-                {
-                    if (c.gameObject.tag == "SodiumAtom")
-                    {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-
-                        }
-                        else
-                        {
-                            
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        return;
-                    }
-                }
-                else if (this.tag == "KForce")
-                {
-                    if (c.gameObject.tag == "PotassiumAtom")
-                    {
-                        if (c.gameObject.transform.position.y > 214.95)
-                        {
-                            // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
-                    else 
-                    {
-                        return;
-                    }
-                }
-            } else if (totalVoltage <= -70) {
-                if (this.tag == "NaForce")
-                {
-                    if (c.gameObject.tag == "SodiumAtom")
-                    {
-                        if (c.gameObject.transform.position.y < 214.95)
-                        {
-                            // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        return;
-                    }
-                }
-                else if (this.tag == "KForce")
-                {
-                    if (c.gameObject.tag == "PotassiumAtom")
-                    {
-                        if (c.gameObject.transform.position.y < 214.95)
-                        {
-                            // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                            Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-                    }
-                }
-            }
-            else {
-                if (this.tag == "NaForce")
-                {
-                    if (c.gameObject.tag == "SodiumAtom")
-                    {
-                        // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-                    }
-                    else
-                    {
-                        return;
-                    }
-                }
-                else if (this.tag == "KForce")
-                {
-                    
-                    if (c.gameObject.tag == "PotassiumAtom")
-                    {
-                        // GameObject.Find("AtomCrossingSound").GetComponent<AudioSource>().Play();
-                        Physics.IgnoreCollision(c.collider, GetComponent<Collider>());
-                    }
-                    else
-                    {
-                        return;
-                    }
-                }
-            }
-        }
-        else { // level 1 or 2
-            print("return statement not working");
+        else 
+        {
             if (this.tag == "NaForce")
             {
                 if (c.gameObject.tag == "SodiumAtom")

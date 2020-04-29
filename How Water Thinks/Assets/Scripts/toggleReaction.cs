@@ -438,6 +438,8 @@ public class toggleReaction : MonoBehaviour {
                 NaMembrane2.SetActive(false);
                 NaLiner.SetActive(true);
                 NaLiner2.SetActive(false);
+                NaForce.SetActive(true);
+                NaForce2.SetActive(false);
             }
             else if (naChannelSlider == 2)
             {
@@ -446,6 +448,8 @@ public class toggleReaction : MonoBehaviour {
                 NaMembrane2.SetActive(true);
                 NaLiner.SetActive(true);
                 NaLiner2.SetActive(true);
+                NaForce.SetActive(true);
+                NaForce2.SetActive(true);
             }
         }
         else if (numChannels == 1)
@@ -457,6 +461,8 @@ public class toggleReaction : MonoBehaviour {
                 NaMembrane2.SetActive(false);
                 NaLiner.SetActive(false);
                 NaLiner2.SetActive(false);
+                NaForce.SetActive(false);
+                NaForce2.SetActive(false);
             }
             else if ((int)(naChannelSlider) == 2)
             {
@@ -465,6 +471,8 @@ public class toggleReaction : MonoBehaviour {
                 NaMembrane2.SetActive(true);
                 NaLiner.SetActive(true);
                 NaLiner2.SetActive(true);
+                NaForce.SetActive(true);
+                NaForce2.SetActive(true);
 
             }
         }
@@ -477,6 +485,8 @@ public class toggleReaction : MonoBehaviour {
                 NaMembrane2.SetActive(false);
                 NaLiner.SetActive(false);
                 NaLiner2.SetActive(false);
+                NaForce.SetActive(false);
+                NaForce2.SetActive(false);
             }
             else if ((int)(naChannelSlider) == 1)
             {
@@ -485,6 +495,8 @@ public class toggleReaction : MonoBehaviour {
                 NaMembrane2.SetActive(false);
                 NaLiner.SetActive(true);
                 NaLiner2.SetActive(false);
+                NaForce.SetActive(true);
+                NaForce2.SetActive(false);
 
             }
         }

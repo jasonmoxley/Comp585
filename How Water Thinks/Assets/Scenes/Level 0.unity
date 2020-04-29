@@ -11628,6 +11628,7 @@ MonoBehaviour:
   sceneName: 
   startTime: 0
   startScreen: {fileID: 56805490}
+  startScreen2: {fileID: 0}
 --- !u!1 &897532514
 GameObject:
   m_ObjectHideFlags: 0
@@ -13239,6 +13240,7 @@ MonoBehaviour:
   sceneName: 
   startTime: 0
   startScreen: {fileID: 0}
+  startScreen2: {fileID: 0}
 --- !u!114 &1045910346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16838,6 +16840,7 @@ MonoBehaviour:
   sceneName: 
   startTime: 0
   startScreen: {fileID: 0}
+  startScreen2: {fileID: 0}
 --- !u!114 &1366007156
 MonoBehaviour:
   m_ObjectHideFlags: 0
