@@ -58,7 +58,7 @@ public class CountdownTimer : MonoBehaviour {
         sceneName = currentScene.name;
         if (sceneName == "Level 0")
         {
-            if (t > 55)
+            if (t > 110)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
@@ -67,7 +67,7 @@ public class CountdownTimer : MonoBehaviour {
                 star2end.SetActive(false);
                 star3end.SetActive(false);
             }
-            else if (t > 45)
+            else if (t > 100)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
@@ -76,7 +76,7 @@ public class CountdownTimer : MonoBehaviour {
                 star2end.SetActive(false);
                 star3end.SetActive(false);
             }
-            else if (t > 35)
+            else if (t > 90)
             {
                 star1.SetActive(false);
                 star2.SetActive(true);
